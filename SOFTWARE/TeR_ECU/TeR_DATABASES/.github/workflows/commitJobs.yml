@@ -1,0 +1,61 @@
+name: Generar código C desde archivos dbc
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  mergeAndGen-dbc: # Compila los dbc en uno solo llamado ALL
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.8'
+
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip install cantools
+
+        - name: Find and merge all DBC files
+          run: |
+            rm ALL.dbc
+            chmod +x ./utils/dbc_merge.py
+            # Encuentra todos los dbcs
+            DBC_FILES=$(find ./ -name "*.dbc" | tr '\n' ' ')
+            if [ -z "$DBC_FILES" ]; then
+              echo "No DBC files found in the directory. Exiting."
+              exit 1
+            fi
+            echo "Found DBC files: $DBC_FILES"
+            ./utils/dbc_merge.py $DBC_FILES -o ALL.dbc
+
+        #Generate new libraries
+        - name: Borrar archivos viejos
+          run: |
+            find . -name "*.c" -type f -delete
+            find . -name "*.h" -type f -delete
+
+        - name: Generar código C desde archivos dbc
+          run: |
+            dbc_files=$(find . -name "*.dbc")  # Encuentra todos los archivos .dbc en el directorio actual y subdirectorios
+            sed -i '/^BA_/d' *.dbc    # Limpia los dbcs de mensajes de definicion de programas externos para que no de problemas
+            for dbc_file in $dbc_files; do
+              python3 -m cantools generate_c_source --use-float "$dbc_file" -o .  # Ejecuta el comando y redirige la salida al archivo
+            done
+        - name: Commit y push de los archivos
+          run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "DBC Library generator"
+            git add -A
+            git commit -m "Añadir ALL.dbc y Librerías"
+            git push
+

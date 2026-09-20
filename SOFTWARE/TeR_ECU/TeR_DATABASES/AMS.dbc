@@ -1,0 +1,234 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: AMS 
+BO_ 1024 Cell_Voltages: 8 AMS
+   SG_ cell_id M : 0|16@1+ (1,0) [0|23] "" Vector__XXX
+   SG_ cell_voltage_1 m0 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_2 m0 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_3 m0 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_4 m0 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_5 m1 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_6 m1 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_7 m1 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_8 m1 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_9 m2 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_10 m2 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_11 m2 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_12 m2 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_13 m3 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_14 m3 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_15 m3 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_16 m3 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_17 m4 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_18 m4 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_19 m4 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_20 m4 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_21 m5 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_22 m5 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_23 m5 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_24 m5 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_25 m6 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_26 m6 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_27 m6 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_28 m6 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_29 m7 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_30 m7 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_31 m7 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_32 m7 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_33 m8 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_34 m8 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_35 m8 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_36 m8 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_37 m9 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_38 m9 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_39 m9 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_40 m9 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_41 m10 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_42 m10 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_43 m10 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_44 m10 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_45 m11 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_46 m11 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_47 m11 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_48 m11 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_49 m12 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_50 m12 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_51 m12 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_52 m12 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_53 m13 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_54 m13 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_55 m13 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_56 m13 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_57 m14 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_58 m14 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_59 m14 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_60 m14 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_61 m15 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_62 m15 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_63 m15 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_64 m15 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_65 m16 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_66 m16 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_67 m16 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_68 m16 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_69 m17 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_70 m17 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_71 m17 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_72 m17 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_73 m18 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_74 m18 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_75 m18 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_76 m18 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_77 m19 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_78 m19 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_79 m19 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_80 m19 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_81 m20 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_82 m20 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_83 m20 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_84 m20 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_85 m21 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_86 m21 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_87 m21 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_88 m21 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_89 m22 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_90 m22 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_91 m22 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_92 m22 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_93 m23 : 16|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_94 m23 : 28|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_95 m23 : 40|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_voltage_96 m23 : 52|12@1+ (1,500) [0|1] "mV" Vector__XXX
+
+BO_ 1025 Cell_Temperatures: 8 AMS
+   SG_ temp_id M : 0|16@1+ (1,0) [0|5] "" Vector__XXX
+   SG_ temp_1 m0 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_2 m0 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_3 m0 : 32|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_4 m0 : 40|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_5 m0 : 48|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_6 m0 : 56|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_7 m1 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_8 m1 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_9 m1 : 32|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_10 m1 : 40|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_11 m1 : 48|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_12 m1 : 56|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_13 m2 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_14 m2 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_15 m2 : 32|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_16 m2 : 40|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_17 m2 : 48|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_18 m2 : 56|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_19 m3 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_20 m3 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_21 m3 : 32|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_22 m3 : 40|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_23 m3 : 48|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_24 m3 : 56|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_25 m4 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_26 m4 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_27 m4 : 32|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_28 m4 : 40|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_29 m4 : 48|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_30 m4 : 56|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_31 m5 : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ temp_32 m5 : 24|8@1+ (1,0) [0|1] "C" Vector__XXX
+
+BO_ 1026 Cell_voltage_status: 8 AMS
+   SG_ cell_max_volt : 0|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_avg_volt : 12|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_min_volt : 24|12@1+ (1,500) [0|1] "mV" Vector__XXX
+   SG_ cell_max_volt_id : 36|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ cell_min_volt_id : 44|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ cell_delta_volt : 52|12@1+ (1,0) [0|1] "mV" Vector__XXX
+
+BO_ 1027 Cell_temperatures_status: 8 AMS
+   SG_ Cell_max_temp : 0|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ Cell_min_temp : 16|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ Cell_avg_temp : 8|8@1+ (1,0) [0|1] "C" Vector__XXX
+   SG_ Cell_min_temp_id : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ Cell_max_temp_id : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1028 hv_measurements_status: 8 AMS
+   SG_ HV_BAT_MEAS : 0|16@1+ (0.03278,0) [0|1] "" Vector__XXX
+   SG_ HV_CAR_MEAS : 16|16@1+ (0.03278,0) [0|1] "" Vector__XXX
+   SG_ Current_A : 48|16@1- (0.03278,0) [0|1] "" Vector__XXX
+   SG_ HV_POWER : 32|16@1- (4.57763,0) [0|1] "" Vector__XXX
+
+BO_ 1029 bms_req: 8 AMS
+   SG_ state_req : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1030 bms_status: 8 AMS
+   SG_ bms_state : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ balancing_go : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FAULT_FLAGS : 32|32@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_POS_REQ : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_NEG_REQ : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_PRECH_REQ : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_POS_FB : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_NEG_FB : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_PRECH_FB : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ AMS_STATUS : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ IMD_STATUS : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CONTACTOR_VOLTAGE : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1031 bms_soc_status: 8 AMS
+   SG_ SOC : 0|16@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1032 bms_config: 8 AMS
+   SG_ ENTRY M : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BALANCING_GO m0 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BALANCING_THRESHOLD_MV m1 : 8|16@1+ (1,0) [0|1] "mV" Vector__XXX
+   SG_ SOC_CALIBRATE_OCV m2 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+
+CM_ BU_ AMS "Accumulator Management System for FS vehicle";
+VAL_ 1024 cell_id 0 "cell_voltages_1_4" 1 "cell_voltages_5_8" 2 "cell_voltages_9_12" 3 "cell_voltages_13_16" 4 "cell_voltages_17_20" 5 "cell_voltages_21_24" 6 "cell_voltages_25_28" 7 "cell_voltages_29_32" 8 "cell_voltages_33_36" 9 "cell_voltages_37_40" 10 "cell_voltages_41_44" 11 "cell_voltages_45_48" 12 "cell_voltages_49_52" 13 "cell_voltages_53_56" 14 "cell_voltages_57_60" 15 "cell_voltages_61_64" 16 "cell_voltages_65_68" 17 "cell_voltages_69_72" 18 "cell_voltages_73_76" 19 "cell_voltages_77_80" 20 "cell_voltages_81_84" 21 "cell_voltages_85_88" 22 "cell_voltages_89_92" 23 "cell_voltages_93_96";
+VAL_ 1025 temp_id 0 "temp_1_6" 1 "temp_7_12" 2 "temp_13_18" 3 "temp_19_24" 4 "temp_25_30" 5 "temp_31_32";
+VAL_ 1029 state_req 2 "READY_REQ" 3 "RUNNING_REQ" 4 "CHARGING_REQ" 5 "STOP_REQ" 8 "RESET_REQ";
+VAL_ 1030 bms_state 0 "POST" 1 "INIT" 2 "READY" 3 "PRECHARGING" 4 "RUNNING" 5 "CHARGING" 6 "FAULT";
+VAL_ 1030 balancing_go 0 "OFF" 1 "ON";
+VAL_ 1030 CONTACTOR_POS_REQ 0 "OFF_REQ" 1 "ON_REQ";
+VAL_ 1030 CONTACTOR_NEG_REQ 0 "OFF_REQ" 1 "ON_REQ";
+VAL_ 1030 CONTACTOR_PRECH_REQ 0 "OFF_REQ" 1 "ON_REQ";
+VAL_ 1030 CONTACTOR_POS_FB 0 "OFF" 1 "ON";
+VAL_ 1030 CONTACTOR_NEG_FB 0 "OFF" 1 "ON";
+VAL_ 1030 CONTACTOR_PRECH_FB 0 "OFF" 1 "ON";
+VAL_ 1030 AMS_STATUS 0 "FAULT" 1 "OK";
+VAL_ 1030 IMD_STATUS 0 "FAULT" 1 "OK";
+VAL_ 1030 CONTACTOR_VOLTAGE 0 "FAULT" 1 "OK";
+VAL_ 1032 ENTRY 0 "BALANCING_GO" 1 "BALANCING_THRESHOLD_MV" 2 "SOC_CALIBRATE_OCV";
+VAL_ 1032 BALANCING_GO 0 "OFF" 1 "ON";
+VAL_ 1032 SOC_CALIBRATE_OCV 0 "OFF" 1 "ON";

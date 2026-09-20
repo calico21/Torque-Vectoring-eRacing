@@ -1,0 +1,58 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: BOOT 
+BO_ 514 BOOT_TX: 8 BOOT
+   SG_ BOOT_CMD M : 0|4@1+ (1,0) [0|3] "" Vector__XXX
+   SG_ NODE_ID : 4|4@1+ (1,0) [0|3] "" Vector__XXX
+   SG_ HEX_CRC m1 : 8|32@1+ (1,0) [0|3] "" Vector__XXX
+   SG_ HEX_SIZE m1 : 40|24@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 513 BOOT_RX: 8 BOOT
+   SG_ BOOT_CMD M : 0|4@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ PERCENT m2 : 4|8@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ACK m0 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ NACK m1 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 512 BOOT_DATA: 8 BOOT
+   SG_ DATA : 0|32@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ADRESS : 32|32@1+ (1,0) [0|1] "" Vector__XXX
+
+VAL_ 514 BOOT_CMD 0 "BOOT_INIT" 1 "TRANSMIT_START" 2 "TRANSMIT_END" 3 "deprecated";
+VAL_ 514 NODE_ID 0 "PEDAL" 1 "REFRI" 2 "LVBMS" 3 "ECU" 4 "STEER";
+VAL_ 514 HEX_CRC 0 "" 0 "" 0 "" 0 "";
+VAL_ 514 HEX_SIZE 0 "" 0 "" 0 "" 0 "";
+VAL_ 513 BOOT_CMD 0 "ACK" 1 "NACK" 2 "PERCENT";
+
+

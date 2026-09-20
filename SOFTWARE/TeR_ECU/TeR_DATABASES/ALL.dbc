@@ -1,0 +1,1576 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PC PS10750_20 BOOT STEER PEDAL TER_CMDS FRONT_AXLE IMU LVBMS ECU CHARGER TireTemps REFRI DV RES STEER_ACTUATOR ASB BOOTLOADER AMS
+
+
+BO_ 2 Read_Object: 8 PS10750_20
+ SG_ Read_Status_Alarm_SF m511 : 41|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_Status_Access m505 : 44|5@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_MS_Type m505 : 46|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_DC_Output m505 : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_Status_Reg_Act m505 : 34|2@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Remote m505 : 35|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_Status_Ext_Sense m505 : 38|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarms m505 : 39|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OVP m505 : 24|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OCP m505 : 25|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OPP m505 : 26|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OT m505 : 27|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_PF m505 : 29|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_MSS m505 : 21|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_REM_SB m505 : 22|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Nominal_Current m123 : 23|32@0- (1,0) [0|0] "A"  PC
+ SG_ Read_Nominal_Power m125 : 23|32@0- (1,0) [0|0] "W"  PC
+ SG_ Read_Nominal_Voltage m121 : 23|32@0- (1,0) [0|0] "V"  PC
+ SG_ Read_Current m501 : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Power m502 : 23|16@0+ (0.095368887,0) [0|5100] "W"  PC
+ SG_ Read_Voltage m500 : 23|16@0+ (0.014305333,0) [0|765] "V"  PC
+ SG_ Read_Limit_Imax m9002 : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Limit_Imin m9003 : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Limit_Pmax m9004 : 23|16@0+ (0.095368887,0) [0|5100] "W"  PC
+ SG_ Read_Limit_Umax m9000 : 23|16@0+ (0.014305333,0) [0|765] "V"  PC
+ SG_ Read_Limit_Umin m9001 : 23|16@0+ (0.014305333,0) [0|765] "V"  PC
+ SG_ Read_Protection_OCP m553 : 23|16@0+ (0.000381476,0) [0|22] "A"  PC
+ SG_ Read_Protection_OPP m556 : 23|16@0+ (0.095368887,0) [0|5500] "W"  PC
+ SG_ Read_Protection_OVP m550 : 23|16@0+ (0.014305333,0) [0|825] "V"  PC
+ SG_ Read_Coil_AI_REM_SB_Action m418 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_AI_REM_SB_Level m417 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_AI_VREF m416 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_DC_After_PF_Alarm m407 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_DC_Output m405 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_DC_After_Power_On m408 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_Remote m402 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Last_Com_Errror m65535 : 23|8@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Alarm_Count_OV m520 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Alarm_Count_OC m521 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Alarm_Count_OP m522 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Alarm_Count_OT m523 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Alarm_Count_PF m524 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_MS_Coil_Enable_MS m653 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_MS_Coil_Link_Mode m650 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_MS_Condition m655 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_MS_Units m662 : 23|16@0+ (1,0) [0|0] ""  PC
+ SG_ Read_MS_Total_Current m658 : 23|32@0- (1,0) [0|0] "A"  PC
+ SG_ Read_MS_Total_Power m660 : 23|32@0- (1,0) [0|0] "W"  PC
+ SG_ Read_MS_Total_Voltage m656 : 23|32@0- (1,0) [0|0] "V"  PC
+ SG_ Read_Actual_Voltage m507 : 23|16@0+ (0.014305333,0) [0|765] "V" Vector__XXX
+ SG_ Read_Actual_Power m509 : 23|16@0+ (0.095368887,0) [0|5100] "W" Vector__XXX
+ SG_ Read_Actual_Current m508 : 23|16@0+ (0.000381476,0) [0|20.4] "A" Vector__XXX
+ SG_ Read_Coil_DC_After_Remote m425 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_Alarm_Count_SF m527 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_MS_Coil_Termination m666 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_MS_Coil_Termination_BIAS m667 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Read_Mux M : 7|16@0+ (1,0) [0|0] ""  PC
+
+BO_ 1 Query_Object: 2 PC
+ SG_ Query_Mux : 7|16@0+ (1,0) [0|0] ""  PS10750_20
+
+BO_ 0 Send_Object: 8 PC
+ SG_ Send_Coil_DC_Output m405 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_Remote_On_Off m402 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Power m502 : 31|16@0+ (0.095368887,0) [0|5100] "W" Vector__XXX
+ SG_ Send_Voltage m500 : 31|16@0+ (0.014305333,0) [0|765] "V" Vector__XXX
+ SG_ Send_Current m501 : 31|16@0+ (0.000381476,0) [0|20.4] "A" Vector__XXX
+ SG_ Send_Protection_OCP m553 : 31|16@0+ (0.000381476,0) [0|22] "A" Vector__XXX
+ SG_ Send_Protection_OPP m556 : 31|16@0+ (0.095368887,0) [0|5500] "W" Vector__XXX
+ SG_ Send_Protection_OVP m550 : 31|16@0+ (0.014305333,0) [0|825] "V" Vector__XXX
+ SG_ Send_Limit_Umax m9000 : 31|16@0+ (0.014305333,0) [0|765] "V" Vector__XXX
+ SG_ Send_Limit_Umin m9001 : 31|16@0+ (0.014305333,0) [0|765] "V" Vector__XXX
+ SG_ Send_Limit_Pmax m9004 : 31|16@0+ (0.095368887,0) [0|5100] "W" Vector__XXX
+ SG_ Send_Limit_Imax m9002 : 31|16@0+ (0.000381476,0) [0|20.4] "A" Vector__XXX
+ SG_ Send_Limit_Imin m9003 : 31|16@0+ (0.000381476,0) [0|20.4] "A" Vector__XXX
+ SG_ Send_Coil_Ack_Alarms m411 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_AI_REM_SB_Action m418 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_AI_REM_SB_Level m417 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_AI_VREF m416 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_DC_After_PF_Alarm m407 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_DC_After_Power_On m408 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_Restart m410 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_MS_Coil_Enable_MS m653 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_MS_Coil_Init_MS m654 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_MS_Coil_Link_Mode m650 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_Coil_DC_After_Remote m425 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_MS_Coil_Termination m666 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Send_MS_Coil_Termination_BIAS m667 : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte_Value_0x01 : 23|8@0+ (1,0) [1|1] "" Vector__XXX
+ SG_ Send_Mux M : 7|16@0+ (1,0) [0|0] ""  PS10750_20
+
+BO_ 258 Cyclic_Read_Set_Values: 8 PS10750_20
+ SG_ Read_Power_Cyclic : 39|16@0+ (0.095368887,0) [0|5100] "W"  PC
+ SG_ Read_Current_Cyclic : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Voltage_Cyclic : 7|16@0+ (0.014305333,0) [0|765] "V"  PC
+
+BO_ 260 Cyclic_Read_Limits_2: 8 PS10750_20
+ SG_ Read_Limit_Pmax_Cyclic : 7|16@0+ (0.095368887,0) [0|5100] "W"  PC
+
+BO_ 259 Cyclic_Read_Limits_1: 8 PS10750_20
+ SG_ Read_Limit_Umin_Cyclic : 55|16@0+ (0.014305333,0) [0|765] "V"  PC
+ SG_ Read_Limit_Umax_Cyclic : 39|16@0+ (0.014305333,0) [0|765] "V"  PC
+ SG_ Read_Limit_Imin_Cyclic : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Limit_Imax_Cyclic : 7|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+
+BO_ 256 Cyclic_Read_Status: 8 PS10750_20
+ SG_ Read_Status_Reg_Act_Cyclic : 26|2@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_DC_Output_Cyclic : 27|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_MS_Type_Cyclic : 28|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Ext_Sense_Cyclic : 30|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_REM_SB_Cyclic : 17|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_PF_Cyclic : 20|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OVP_Cyclic : 21|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OT_Cyclic : 8|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OPP_Cyclic : 9|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Access_Cyclic : 15|5@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_OCP_Cyclic : 0|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarm_MSS_Cyclic : 2|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Alarms_Cyclic : 3|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Coil_DC_Output_Cyclic : 6|1@0+ (1,0) [0|0] ""  PC
+ SG_ Read_Status_Remote_Cyclic : 7|1@0+ (1,0) [0|0] ""  PC
+
+BO_ 257 Cyclic_Read_Act_Values: 8 PS10750_20
+ SG_ Read_Actual_Power_Cyclic : 39|16@0+ (0.095368887,0) [0|5100] "W" Vector__XXX
+ SG_ Read_Actual_Current_Cyclic : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PC
+ SG_ Read_Actual_Voltage_Cyclic : 7|16@0+ (0.014305333,0) [0|765] "V" Vector__XXX
+
+BO_ 512 Cyclic_Send_Mode: 8 PC
+ SG_ Send_Coil_Remote_On_Off_Cyclic : 0|1@0+ (1,0) [0|0] ""  PS10750_20
+ SG_ Send_Coil_DC_Output_Cyclic : 1|1@0+ (1,0) [0|0] ""  PS10750_20
+ SG_ Send_Coil_Ack_Alarms_Cyclic : 4|1@0+ (1,0) [0|0] ""  PS10750_20
+
+BO_ 513 Cyclic_Send_Set_Values: 8 PC
+ SG_ Send_Power_Cyclic : 39|16@0+ (0.095368887,0) [0|5100] "W"  PS10750_20
+ SG_ Send_Current_Cyclic : 23|16@0+ (0.000381476,0) [0|20.4] "A"  PS10750_20
+ SG_ Send_Voltage_Cyclic : 7|16@0+ (0.014305333,0) [0|765] "V"  PS10750_20
+
+BO_ 1400 EMCU_STATE_9_Left: 4 Vector__XXX
+ SG_ Torque_Est_Nm : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1399 EMCU_STATE_8_Left: 6 Vector__XXX
+ SG_ Setpoint_App_Q_A : 32|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Setpoint_App_D_A : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Torque_Max_Feas_Ndm : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 1398 EMCU_STATE_7_Left: 2 Vector__XXX
+ SG_ Dem : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1397 EMCU_STATE_6_Left: 8 Vector__XXX
+ SG_ ACBus_Voltage_V : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ DCBus_Power_W : 32|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ ACBus_Power_W : 10|16@1- (32.767,0) [-1073710|1073680] "" Vector__XXX
+ SG_ DCBus_Voltage_V : 0|10@1+ (1,0) [0|1023] "" Vector__XXX
+
+BO_ 1396 EMCU_STATE_5_Left: 2 Vector__XXX
+ SG_ PosFb_Src_App : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Ctrl_Mode_App : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Ctrl_Type_App : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Cmd_Src_App : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1395 EMCU_STATE_4_Left: 5 Vector__XXX
+ SG_ EMachine_Temp_2_degC : 32|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ EMachine_Temp_1_degC : 24|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ PwrStg_Temp_degC : 16|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ Board_2_Temp_degC : 8|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ Board_1_Temp_degC : 0|8@1- (1,80) [-48|207] "" Vector__XXX
+
+BO_ 1394 EMCU_STATE_3_Left: 8 Vector__XXX
+ SG_ EMachine_Speed_erpm : 44|20@1- (1,0) [-524288|524287] "" Vector__XXX
+ SG_ Volt_Modulus_permil : 32|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Current_Q_A : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Current_D_A : 0|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+
+BO_ 1393 EMCU_STATE_2_Left: 3 Vector__XXX
+ SG_ App_State_App : 17|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ EMCtrl_FOC_BitState : 9|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PwrStg_BitState : 0|9@1+ (1,0) [0|511] "" Vector__XXX
+
+BO_ 1392 EMCU_STATE_1_Left: 5 Vector__XXX
+ SG_ CPU_Load : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Uptime_ms : 0|32@1+ (1,0) [0|2704] "" Vector__XXX
+
+BO_ 1653 EMCU_SETPOINT_6_Left: 2 Vector__XXX
+ SG_ PWM_Freq_KHz : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1651 EMCU_SETPOINT_4_Left: 4 Vector__XXX
+ SG_ Speed_erpm : 0|32@1- (1,0) [-2147480000|2147480000] "" Vector__XXX
+
+BO_ 1650 EMCU_SETPOINT_3_Left: 4 Vector__XXX
+ SG_ Torque_Nm_Req : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1649 EMCU_SETPOINT_2_Left: 4 Vector__XXX
+ SG_ Current_Q_A_Req : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Current_D_A_Req : 0|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+
+BO_ 1648 EMCU_SETPOINT_1_Left: 3 Vector__XXX
+ SG_ App_State_Req : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2147485552 EMCU_DEBUG_1_Left: 2 Vector__XXX
+ SG_ EMachine_Angle_fract16 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1376 EMCU_STATE_1_Right: 5 Vector__XXX
+ SG_ CPU_Load : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Uptime_ms : 0|32@1+ (1,0) [0|2704] "" Vector__XXX
+
+BO_ 1377 EMCU_STATE_2_Right: 3 Vector__XXX
+ SG_ App_State_App : 17|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ EMCtrl_FOC_BitState : 9|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PwrStg_BitState : 0|9@1+ (1,0) [0|511] "" Vector__XXX
+
+BO_ 1378 EMCU_STATE_3_Right: 8 Vector__XXX
+ SG_ EMachine_Speed_erpm : 44|20@1- (1,0) [-524288|524287] "" Vector__XXX
+ SG_ Volt_Modulus_permil : 32|12@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ Current_Q_A : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Current_D_A : 0|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+
+BO_ 1379 EMCU_STATE_4_Right: 5 Vector__XXX
+ SG_ EMachine_Temp_2_degC : 32|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ EMachine_Temp_1_degC : 24|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ PwrStg_Temp_degC : 16|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ Board_2_Temp_degC : 8|8@1- (1,80) [-48|207] "" Vector__XXX
+ SG_ Board_1_Temp_degC : 0|8@1- (1,80) [-48|207] "" Vector__XXX
+
+BO_ 1380 EMCU_STATE_5_Right: 2 Vector__XXX
+ SG_ PosFb_Src_App : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Ctrl_Mode_App : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Ctrl_Type_App : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Cmd_Src_App : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1381 EMCU_STATE_6_Right: 8 Vector__XXX
+ SG_ ACBus_Voltage_V : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ DCBus_Power_W : 32|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ ACBus_Power_W : 10|16@1- (32.767,0) [-1073710|1073680] "" Vector__XXX
+ SG_ DCBus_Voltage_V : 0|10@1+ (1,0) [0|1023] "" Vector__XXX
+
+BO_ 1382 EMCU_STATE_7_Right: 2 Vector__XXX
+ SG_ Dem : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1383 EMCU_STATE_8_Right: 6 Vector__XXX
+ SG_ Setpoint_App_Q_A : 32|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Setpoint_App_D_A : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Torque_Max_Feas_Ndm : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 1384 EMCU_STATE_9_Right: 4 Vector__XXX
+ SG_ Torque_Est_Nm : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1632 EMCU_SETPOINT_1_Right: 3 Vector__XXX
+ SG_ App_State_Req : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1633 EMCU_SETPOINT_2_Right: 4 Vector__XXX
+ SG_ Current_Q_A_Req : 16|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+ SG_ Current_D_A_Req : 0|16@1- (0.03125,0) [-1024|1023.97] "" Vector__XXX
+
+BO_ 1634 EMCU_SETPOINT_3_Right: 4 Vector__XXX
+ SG_ Torque_Nm_Req : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ E2E_P1_CNT : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1635 EMCU_SETPOINT_4_Right: 4 Vector__XXX
+ SG_ Speed_erpm : 0|32@1- (1,0) [-2147480000|2147480000] "" Vector__XXX
+
+BO_ 1637 EMCU_SETPOINT_6_Right: 2 Vector__XXX
+ SG_ PWM_Freq_KHz : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2147485536 EMCU_DEBUG_1_Right: 2 Vector__XXX
+ SG_ EMachine_Angle_fract16 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 514 BOOT_TX: 8 BOOT
+ SG_ HEX_SIZE m1 : 40|24@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HEX_CRC m1 : 8|32@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ NODE_ID : 4|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BOOT_CMD M : 0|4@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 3 APPS: 8 PEDAL
+ SG_ IMP_FLAG : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ APPS_AV : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ APPS_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ APPS_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 4 BPPS: 8 PEDAL
+ SG_ BPPS : 0|16@1+ (0.01,0) [0|1] "Bar" Vector__XXX
+
+BO_ 5 STEER: 8 PEDAL
+ SG_ IMP_FLAG : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ANGLE : 0|16@1- (0.01,0) [-3000|3000] "Grad" Vector__XXX
+
+BO_ 9 BTN: 8 STEER
+ SG_ EB : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EL : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ER : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ b4 : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ b3 : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ b2 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ b1 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LI : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LD : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 16 LV_VOLTAGES: 8 LVBMS
+ SG_ V6 : 50|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+ SG_ V5 : 40|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+ SG_ V4 : 30|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+ SG_ V3 : 20|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+ SG_ V2 : 10|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+ SG_ V1 : 0|10@1+ (0.01,0) [0|1] "V" Vector__XXX
+
+BO_ 17 LV_TEMPS: 6 LVBMS
+ SG_ T2 : 16|16@1+ (0.1,0) [0|1] "Grad" Vector__XXX
+ SG_ T1 : 0|16@1+ (0.1,0) [0|1] "Grad" Vector__XXX
+
+BO_ 18 LV_STATUS: 8 LVBMS
+ SG_ V_tot : 52|12@1+ (0.01,0) [0|0] "" Vector__XXX
+ SG_ V_min : 42|10@1+ (0.01,0) [0|0] "" Vector__XXX
+ SG_ V_mean : 32|10@1+ (0.01,0) [0|0] "" Vector__XXX
+ SG_ V_max : 22|10@1+ (0.01,0) [0|0] "" Vector__XXX
+ SG_ CURRENT : 6|16@1+ (0.1,0) [0|1] "A" Vector__XXX
+ SG_ LV_ON : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REFRI_ON : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CURRENT_OK : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TEMPS_OK : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VOLTAGES_OK : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ STATUS : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 19 LV_INFO: 8 LVBMS
+ SG_ battDuration : 12|12@1+ (1,0) [0|1] "min" Vector__XXX
+ SG_ SOC : 0|12@1+ (0.1,0) [0|1] "%" Vector__XXX
+
+BO_ 36 Front_TempsR: 8 FRONT_AXLE
+ SG_ TempL : 16|16@1+ (0.1,0) [0|1] "grad" Vector__XXX
+ SG_ TempR : 0|16@1+ (0.1,0) [0|1] "grad" Vector__XXX
+
+BO_ 37 TER_STATUS: 8 ECU
+ SG_ LEFT_INV : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RIGHT_INV : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REFRI : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IMU : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APPS : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SL_RELAY : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AS_ALLOWED : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASMS : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AMS : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IMD : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BSPD : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SL : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SCS : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ R2D : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ STATE : 0|4@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 38 ECU_CONFIG: 8 ECU
+ SG_ DV_MISSION_REQ m26 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TRQ_LIMIT m8 : 8|8@1+ (1,0) [0|1] "NM" Vector__XXX
+ SG_ TRQ_KP m5 : 8|32@1- (1,0) [0|1] "" Vector__XXX
+ SG_ TRQ_KI m6 : 8|32@1- (1,0) [0|1] "" Vector__XXX
+ SG_ TRQ_KD m7 : 8|32@1- (1,0) [0|1] "" Vector__XXX
+ SG_ TRACTION_CONTROL m4 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SCS_ENABLE m0 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_TRQ_SLOPE m23 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_THR_SPEED m21 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_THR_RPM m22 : 8|16@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_MODE m24 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_MAX_TRQ m17 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_MAX_POSITIVE_TRQ_THR m25 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_MAX_CURRENT m20 : 8|16@1- (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_MAX_CELL_VOLT m18 : 8|16@1+ (1,0) [0|1] "mV" Vector__XXX
+ SG_ REGEN_MAX_CELL_TEMP m19 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ REGEN_ENABLE m16 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ R2D_BRAKE m1 : 8|8@1+ (1,0) [0|1] "Bar" Vector__XXX
+ SG_ LIMITER m2 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FLAP_R_REVERSE m13 : 8|8@1+ (1,0) [0|1] "0" Vector__XXX
+ SG_ FLAP_R_OFFSET m11 : 8|16@1- (1,0) [0|1] "Âº" Vector__XXX
+ SG_ FLAP_PEDAL_SETPOINT m15 : 8|8@1+ (1,0) [0|1] "0" Vector__XXX
+ SG_ FLAP_L_REVERSE m12 : 8|8@1+ (1,0) [0|1] "0" Vector__XXX
+ SG_ FLAP_L_OFFSET m10 : 8|16@1- (1,0) [0|1] "Âº" Vector__XXX
+ SG_ FLAP_ENABLE m14 : 8|8@1+ (1,0) [0|1] "0" Vector__XXX
+ SG_ EEPROM m9 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DRIVING_MODE m3 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ENTRY M : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 39 WheelInfo: 8 ECU
+ SG_ speed : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ rlTRQ : 40|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ rlRPM : 24|16@1- (1,0) [0|1] "" Vector__XXX
+ SG_ rrTRQ : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ rrRPM : 0|16@1- (1,0) [0|1] "" Vector__XXX
+
+BO_ 40 InverterInfo: 8 ECU
+ SG_ rightMotorTemp : 40|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ leftMotorTemp : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ rightPowerStageTemp : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ leftPowerStageTemp : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ rightDem : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ leftDem : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 41 Front_TempsL: 8 FRONT_AXLE
+ SG_ TempL : 16|16@1+ (0.1,0) [0|1] "grad" Vector__XXX
+ SG_ TempR : 0|16@1+ (0.1,0) [0|1] "grad" Vector__XXX
+
+BO_ 42 Rear_Susp: 8 FRONT_AXLE
+ SG_ rrDisp : 16|16@1- (0.1,0) [0|1] "mm" Vector__XXX
+ SG_ rlDisp : 0|16@1- (0.1,0) [0|1] "mm" Vector__XXX
+
+BO_ 20 Front_RPM: 8 FRONT_AXLE
+ SG_ RPM_R : 16|16@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RPM_L : 0|16@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 21 Front_V: 8 FRONT_AXLE
+ SG_ vx_av : 24|12@1+ (0.01,0) [0|1] "" Vector__XXX
+ SG_ vx_r : 12|12@1+ (0.01,0) [0|1] "" Vector__XXX
+ SG_ vx_l : 0|12@1+ (0.01,0) [0|1] "" Vector__XXX
+
+BO_ 22 YPR: 8 IMU
+ SG_ YAW : 40|20@1- (0.01,0) [0|1] "" Vector__XXX
+ SG_ ROLL : 20|20@1- (0.01,0) [0|1] "" Vector__XXX
+ SG_ PITCH : 0|20@1- (0.01,0) [0|1] "" Vector__XXX
+
+BO_ 23 AngRate: 8 IMU
+ SG_ Yaw_Rate_z : 40|20@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ Pitch_Rate_y : 20|20@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ Roll_Rate_x : 0|20@1- (0.001,0) [0|1] "" Vector__XXX
+
+BO_ 24 GPS_Lat_Long: 8 IMU
+ SG_ Longitude : 32|32@1- (1e-07,0) [0|1] "" Vector__XXX
+ SG_ Latitude : 0|32@1- (1e-07,0) [0|1] "" Vector__XXX
+
+BO_ 25 GPS_Altitude_Pres: 8 IMU
+ SG_ Barometric_Pressure : 32|16@1- (1e-07,0) [0|1] "" Vector__XXX
+ SG_ Altidude : 0|32@1- (1e-07,0) [0|1] "" Vector__XXX
+
+BO_ 26 Accel: 8 IMU
+ SG_ a_z : 32|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ a_y : 16|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ a_x : 0|16@1- (0.001,0) [0|1] "" Vector__XXX
+
+BO_ 27 Mag: 8 IMU
+ SG_ Heading : 0|16@1- (0.01,0) [0|1] "" Vector__XXX
+
+BO_ 28 VelBody: 8 IMU
+ SG_ v_z : 32|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ v_y : 16|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ v_x : 0|16@1- (0.001,0) [0|1] "" Vector__XXX
+
+BO_ 29 ImuStatus: 8 IMU
+ SG_ VelU : 32|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ PosU : 16|16@1- (0.001,0) [0|1] "" Vector__XXX
+ SG_ Status : 0|16@1- (1,0) [0|1] "" Vector__XXX
+
+BO_ 30 REFRI_TEMPS: 8 REFRI
+ SG_ TL_OUT : 30|10@1+ (0.1,0) [0|1] "C" Vector__XXX
+ SG_ TL_IN : 20|10@1+ (0.1,0) [0|1] "C" Vector__XXX
+ SG_ TR_OUT : 10|10@1+ (0.1,0) [0|1] "C" Vector__XXX
+ SG_ TR_IN : 0|10@1+ (0.1,0) [0|1] "C" Vector__XXX
+
+BO_ 31 REFRI_CONFIG: 8 REFRI
+ SG_ TARGET_TEMP_ACCU m7 : 8|8@1+ (1,0) [0|1] "ÂºC" Vector__XXX
+ SG_ TARGET_TEMP m3 : 8|8@1+ (1,0) [0|1] "ÂºC" Vector__XXX
+ SG_ POWER_ACCU m4 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ POWER m0 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MODE_ACCU m6 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MODE m2 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ INTENSITY_ACCU m5 : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ INTENSITY m1 : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ ENTRY M : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 32 REFRI_RPM: 8 REFRI
+ SG_ ACCU_RPM : 32|16@1+ (1,0) [0|1] "rpm" Vector__XXX
+ SG_ R_RPM : 16|16@1+ (1,0) [0|1] "rpm" Vector__XXX
+ SG_ L_RPM : 0|16@1+ (1,0) [0|1] "rpm" Vector__XXX
+
+BO_ 33 REFRI_STATUS: 8 REFRI
+ SG_ MODE : 16|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CURRENT : 0|16@1+ (0.1,0) [0|1] "" Vector__XXX
+
+BO_ 48 CHRG_STATUS: 8 CHARGER
+ SG_ AMS : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IMD : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SL : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Curve : 40|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Current : 24|8@1+ (0.1,0) [0|1] "" Vector__XXX
+ SG_ Voltage : 8|16@1+ (1,0) [0|1] "V" Vector__XXX
+ SG_ State : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1008 flTemp: 8 TireTemps
+ SG_ TW4 : 55|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW3 : 39|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW2 : 23|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW1 : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 1012 frTemp: 8 TireTemps
+ SG_ TW4 : 55|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW3 : 39|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW2 : 23|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW1 : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 1016 rrTemp: 8 TireTemps
+ SG_ TW4 : 55|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW3 : 39|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW2 : 23|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW1 : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 1020 rlTemp: 8 TireTemps
+ SG_ TW4 : 55|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW3 : 39|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW2 : 23|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ TW1 : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 43 TV_DEBUG: 8 ECU
+ SG_ delta_trq : 16|8@1- (1,0) [0|1] "Nm" Vector__XXX
+ SG_ yaw_ref : 0|16@1- (0.01,0) [0|1] "deg" Vector__XXX
+
+BO_ 1280 DV_driving_dynamics_1: 8 ECU
+ SG_ Motor_moment_target : 56|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Motor_moment_actual : 48|8@1+ (1,0) [0|1] "%" Vector__XXX
+ SG_ Brake_hydr_target : 40|8@1+ (1,0) [0|1] "Âº" Vector__XXX
+ SG_ Brake_hydr_actual : 32|8@1+ (1,0) [0|1] "%" Vector__XXX
+ SG_ Steering_angle_target : 24|8@1- (0.5,0) [0|1] "Âº" Vector__XXX
+ SG_ Steering_angle_actual : 16|8@1- (0.5,0) [0|1] "" Vector__XXX
+ SG_ Speed_target : 8|8@1+ (1,0) [0|1] "km/h" Vector__XXX
+ SG_ Speed_actual : 0|8@1+ (1,0) [0|1] "km/h" Vector__XXX
+
+BO_ 1283 DV_system_status: 5 ECU
+ SG_ Cones_count_all : 23|17@1+ (1,0) [0|130000] "" Vector__XXX
+ SG_ Cones_count_actual : 15|8@1+ (1,0) [0|256] "" Vector__XXX
+ SG_ Lap_counter : 11|4@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ ASB_redundancy_state : 9|2@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ Steering_state : 8|1@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ AMI_state : 5|3@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ AS_EBS_state : 3|2@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ AS_status : 0|3@1+ (1,0) [0|5] "" Vector__XXX
+
+BO_ 1281 DV_driving_dynamics_2: 6 ECU
+ SG_ Yaw_rate : 32|16@1+ (0.0078125,0) [0|1] "Âº/s" Vector__XXX
+ SG_ Acceleration_lateral : 16|16@1- (0.00195313,0) [0|1] "" Vector__XXX
+ SG_ Acceleration_longitudinal : 0|16@1- (0.00195313,0) [0|1] "m/s2" Vector__XXX
+
+BO_ 145 RES_Sync: 8 RES
+
+BO_ 401 RES_PDO_tx: 8 RES
+ SG_ race_mode : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pre_alarm_radio : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ radio_quality : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ E_STOP_2 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ K3 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ K2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ E_STOP_1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 529 RES_PDO_rx: 8 RES
+
+BO_ 1425 RES_SDO_tx: 8 RES
+
+BO_ 1553 RES_SDO_rx: 8 RES
+
+BO_ 1809 RES_NMT_node_monitoring: 1 RES
+ SG_ data_byte : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2037 RES_LSS_tx: 8 RES
+
+BO_ 2038 RES_LSS_rx: 8 RES
+
+BO_ 2147483768 steer_actuator_set_duty: 8 STEER_ACTUATOR
+ SG_ actuator_duty_cycle : 7|32@0+ (1e-05,0) [0|1] "" Vector__XXX
+
+BO_ 2147484024 steer_actuator_set_current_loop: 8 STEER_ACTUATOR
+ SG_ actuator_current_loop : 7|32@0- (0.001,0) [0|1] "" Vector__XXX
+
+BO_ 2147484280 steer_actuator_set_current_brake: 8 STEER_ACTUATOR
+ SG_ actuator_current_brake : 7|32@0- (0.001,0) [0|1] "" Vector__XXX
+
+BO_ 2147484536 steer_actuator_set_speed: 8 STEER_ACTUATOR
+ SG_ actuator_speed : 7|32@0- (1,0) [-100000|100000] "erpms" Vector__XXX
+
+BO_ 2147484792 steer_actuator_set_position: 8 STEER_ACTUATOR
+ SG_ actuator_position : 7|32@0- (0.0001,0) [-360000000.0|360000000.0] "" Vector__XXX
+
+BO_ 2147485304 steer_actuator_set_position_spee: 8 STEER_ACTUATOR
+ SG_ actuator_acceleration_loop : 55|16@0+ (10,0) [0|1] "" Vector__XXX
+ SG_ actuator_speed_loop : 39|16@0+ (10,0) [0|1] "" Vector__XXX
+ SG_ actuator_position_loop : 7|32@0- (0.0001,0) [0|1] "" Vector__XXX
+
+BO_ 2147494264 steer_actuator_status: 8 STEER_ACTUATOR
+ SG_ error_code : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ temperature : 55|8@0- (1,0) [0|1] "" Vector__XXX
+ SG_ current : 39|16@0- (0.01,0) [0|1] "" Vector__XXX
+ SG_ speed : 23|16@0- (10,0) [0|1] "" Vector__XXX
+ SG_ position : 7|16@0- (0.1,0) [0|1] "" Vector__XXX
+
+BO_ 35 Front_Susp: 8 FRONT_AXLE
+ SG_ frDisp : 16|16@1- (0.1,0) [0|1] "mm" Vector__XXX
+ SG_ flDisp : 0|16@1- (0.1,0) [0|1] "mm" Vector__XXX
+
+BO_ 49 CHRG_REQ: 8 CHARGER
+ SG_ mode_req : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 6 DV_Dynamic_Req_1: 8 ECU
+ SG_ steer_angle_req : 32|32@1- (0.0001,0) [-360000000.0|360000000.0] "Âº" Vector__XXX
+ SG_ trq_req : 0|32@1- (0.0001,0) [-1|1] "" Vector__XXX
+
+BO_ 8 ASB_STATUS: 8 ASB
+ SG_ ASB_ENERGY_STATUS : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASB_BREAK_STATUS : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASB_redundancy_state : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASB_EBS_state : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 10 ASB_EBS_state_req: 8 ASB
+ SG_ state_req : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 11 ASB_redundancy_req: 8 ASB
+ SG_ state_req : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 12 DV_info: 8 DV
+ SG_ MISSION : 37|3@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ LAP_COUNTER : 33|4@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ CONES_COUNT_ALL : 16|17@1+ (1,0) [0|130000] "" Vector__XXX
+ SG_ CONES_COUNT_ACTUAL : 8|8@1+ (1,0) [0|256] "" Vector__XXX
+ SG_ MISSION_STATUS : 0|8@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 13 DV_Dynamic_Req_2: 8 ECU
+ SG_ ASB_BRAKE_REQ : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 14 DV_CONFIG: 8 DV
+ SG_ MISSION_REQ m0 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ENTRY M : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 15 ASB_brake_req: 8 ASB
+ SG_ BRAKE : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 771 BOOTLOADER_RESERVED_1: 8 BOOTLOADER
+
+BO_ 772 BOOTLOADER_RESERVED_2: 8 BOOTLOADER
+
+BO_ 773 BOOTLOADER_RESERVED_3: 8 BOOTLOADER
+
+BO_ 774 BOOTLOADER_RESERVED_4: 8 BOOTLOADER
+
+BO_ 775 BOOTLOADER_RESERVED_5: 8 BOOTLOADER
+
+BO_ 776 BOOTLOADER_RESERVED_6: 8 BOOTLOADER
+
+BO_ 864 BMS_RX_CTRL_1: 8 Vector__XXX
+ SG_ IMD_En : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BalancingThreshold : 29|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Balance_Auth : 28|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Contactor_4_Req : 27|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Contactor_3_Req : 26|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Contactor_2_Req : 25|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Contactor_1_Req : 24|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ DEM_Clear : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ App_State_Req : 16|7@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ E2E_P1_ZERO : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CNT : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ E2E_P1_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1024 BMS_TX_CMD_1: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1025 BMS_TX_CMD_2: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1026 BMS_TX_CMD_3: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1027 BMS_TX_CMD_4: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1028 BMS_TX_CMD_5: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1029 BMS_TX_CMD_6: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1030 BMS_TX_CMD_7: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1031 BMS_TX_CMD_8: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1032 BMS_TX_CMD_9: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1033 BMS_TX_CMD_10: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1034 BMS_TX_CMD_11: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1035 BMS_TX_CMD_12: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1036 BMS_TX_CMD_13: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1037 BMS_TX_CMD_14: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1038 BMS_TX_CMD_15: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1039 BMS_TX_CMD_16: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1040 BMS_TX_CMD_17: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1041 BMS_TX_CMD_18: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1042 BMS_TX_CMD_19: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1043 BMS_TX_CMD_20: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1044 BMS_TX_CMD_21: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1045 BMS_TX_CMD_22: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1046 BMS_TX_CMD_23: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1047 BMS_TX_CMD_24: 6 Vector__XXX
+ SG_ CellTemp4 m6 : 32|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell9 m2 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell6 m1 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell3 m0 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell18 m5 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell15 m4 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell12 m3 : 32|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp3 m6 : 24|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell8 m2 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell5 m1 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell2 m0 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell17 m5 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell14 m4 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell11 m3 : 20|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ CellTemp2 m6 : 16|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ CellTemp1 m6 : 8|8@1+ (1,-40) [-40|140] "" Vector__XXX
+ SG_ Cell7 m2 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell4 m1 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell16 m5 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell13 m4 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell10 m3 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell1 m0 : 8|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Cnt : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Cell_Idx M : 0|4@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 1120 BMS_TX_STATE_1: 7 Vector__XXX
+ SG_ CPU_2_Load : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CPU_1_Load : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CPU_0_Load : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Uptime_ms : 0|32@1+ (1,0) [0|4294970000.0] "" Vector__XXX
+
+BO_ 1121 BMS_TX_STATE_2: 4 Vector__XXX
+ SG_ DEM_Present : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DEM_Code : 0|15@1+ (1,0) [0|32767] "" Vector__XXX
+
+BO_ 1122 BMS_TX_STATE_3: 2 Vector__XXX
+ SG_ HVIL_State : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIO4_State : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIO3_State : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIO2_State : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIO1_State : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ App_State_App : 0|7@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1123 BMS_TX_STATE_4: 8 Vector__XXX
+ SG_ Power_W : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Volt_Synth_x10_V : 32|16@1+ (0.03052,0) [0|2000.13] "" Vector__XXX
+ SG_ Curr_2_x10_A : 16|16@1- (0.03052,0) [-1000.08|1000.05] "" Vector__XXX
+ SG_ Curr_1_x10_A : 0|16@1- (0.03052,0) [-1000.08|1000.05] "" Vector__XXX
+
+BO_ 1124 BMS_TX_STATE_5: 8 Vector__XXX
+ SG_ Volt_KL30 : 48|16@1+ (1,0) [-32768|32767] "" Vector__XXX
+ SG_ Volt_3_x10_V : 32|16@1- (0.03052,0) [-1000.08|1000.05] "" Vector__XXX
+ SG_ Volt_2_x10_V : 16|16@1- (0.03052,0) [-1000.08|1000.05] "" Vector__XXX
+ SG_ Volt_1_x10_V : 0|16@1- (0.03052,0) [-1000.08|1000.05] "" Vector__XXX
+
+BO_ 1125 BMS_TX_STATE_6: 7 Vector__XXX
+ SG_ Cell_Max_Idx : 45|9@1+ (1,0) [0|511] "" Vector__XXX
+ SG_ Cell_Min_Idx : 36|9@1+ (1,0) [0|511] "" Vector__XXX
+ SG_ Cell_Avg_V : 24|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Max_V : 12|12@1+ (1,405) [405|4500] "" Vector__XXX
+ SG_ Cell_Min_V : 0|12@1+ (1,405) [405|4500] "" Vector__XXX
+
+BO_ 1126 BMS_TX_STATE_7: 4 Vector__XXX
+ SG_ Temp_4_degC : 24|8@1+ (1,-50) [-50|205] "" Vector__XXX
+ SG_ Temp_3_degC : 16|8@1+ (1,-50) [-50|205] "" Vector__XXX
+ SG_ Temp_2_degC : 8|8@1+ (1,-50) [-50|205] "" Vector__XXX
+ SG_ Temp_1_degC : 0|8@1+ (1,-50) [-50|205] "" Vector__XXX
+
+BO_ 1127 BMS_TX_STATE_8: 8 Vector__XXX
+ SG_ Diag_Temp_3_Undertemp : 15|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Temp_3_Overtemp : 14|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Temp_2_Undertemp : 13|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Temp_2_Overtemp : 12|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Temp_1_Undertemp : 11|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Temp_1_Overtemp : 10|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Cell_Undervolt : 9|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Cell_Undertemp : 8|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Cell_Overvolt : 7|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ Diag_Cell_Overtemp : 6|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ FB6 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB5 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB4 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB3 : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FB2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FB1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1128 BMS_TX_STATE_9: 3 Vector__XXX
+ SG_ Cell_Temp_Min_degC : 16|8@1- (1,-50) [-128|127] "" Vector__XXX
+ SG_ Cell_Temp_Max_degC : 8|8@1- (1,-50) [-128|127] "" Vector__XXX
+ SG_ Cell_Temp_Avg_degC : 0|8@1- (1,-50) [-128|127] "" Vector__XXX
+
+BO_ 1129 BMS_TX_STATE_10: 4 Vector__XXX
+ SG_ IMD_Res_Neg_kohm : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ IMD_Res_Pos_kohm : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 1136 BMS_TX_STATE_11: 8 Vector__XXX
+ SG_ SOH : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SOC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+
+CM_ BU_ STEER "The Steering Input MOdule";
+CM_ BU_ PEDAL "The Drivers Sensor Board";
+CM_ BU_ TER_CMDS "The Command Subsystem For TeR Vehicle";
+CM_ BU_ FRONT_AXLE "The Board for Front axle sensors";
+CM_ BU_ IMU "TeRs Inertial Measurement Unit";
+CM_ BU_ LVBMS "The LV battery Management System";
+CM_ BU_ ECU "The VCU for TeR Vehicle";
+CM_ BU_ CHARGER "The Control Module for TeR Charger";
+CM_ BU_ REFRI "The refrigeration module";
+CM_ BU_ DV "status from dv controller";
+CM_ BU_ RES "Remote Emergency System Message Definition";
+CM_ BU_ ASB "Autonomous System Brake board";
+CM_ BU_ BOOTLOADER "Bootloader reserved signals";
+CM_ BU_ AMS "Accumulator Management System for FS vehicle";
+CM_ SG_ 37 AS_ALLOWED "indicates_if_the_car_will_respond_nput_from_dv";
+CM_ SG_ 38 EEPROM "write_here_the_config_id_to_request_value_from_eeprom,_otherwhise_use_value_table_for_options";
+CM_ BO_ 6 "torque and steer request messages from dv";
+CM_ SG_ 8 ASB_ENERGY_STATUS "is_AS_brake_energy_available";
+CM_ BO_ 12 "dv computer status";
+CM_ BO_ 13 "asb request messages from dv";
+CM_ SG_ 14 MISSION_REQ "Request_mission_from_DV_computer";
+VAL_ 2 Read_Status_Alarm_SF 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Access 25 "CAN" 8 "Master/Slave" 5 "analog" 3 "USB" 2 "remote" 1 "local" 0 "free" ;
+VAL_ 2 Read_Status_MS_Type 1 "Master" 0 "Slave" ;
+VAL_ 2 Read_Status_DC_Output 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Reg_Act 1 "CR" 3 "CP" 2 "CC" 0 "CV" ;
+VAL_ 2 Read_Status_Remote 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Ext_Sense 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarms 1 "Alarm" 0 "No alarm" ;
+VAL_ 2 Read_Status_Alarm_OVP 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_OCP 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_OPP 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_OT 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_PF 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_MSS 1 "on" 0 "off" ;
+VAL_ 2 Read_Status_Alarm_REM_SB 1 "on" 0 "off" ;
+VAL_ 2 Read_Coil_AI_REM_SB_Action 65280 "DC auto" 0 "DC off" ;
+VAL_ 2 Read_Coil_AI_REM_SB_Level 65280 "inverted" 0 "normal" ;
+VAL_ 2 Read_Coil_AI_VREF 65280 "5V" 0 "10V" ;
+VAL_ 2 Read_Coil_DC_After_PF_Alarm 65280 "auto-on" 0 "off" ;
+VAL_ 2 Read_Coil_DC_Output 65280 "on" 0 "off" ;
+VAL_ 2 Read_Coil_DC_After_Power_On 65535 "off" 65534 "restore" ;
+VAL_ 2 Read_Coil_Remote 65280 "on" 0 "off" ;
+VAL_ 2 Read_Last_Com_Errror 23 "Device in local" 5 "CRC" 4 "Execution" 3 "Wrong data or data length" 2 "Invalid address" 1 "Wrong function code" 20 "CAN driver buffer full" 18 "CAN transmission error" 17 "CAN CRC error" 16 "CAN stuffing error" 13 "Message buffer overflow" 7 "Access denied" 0 "No error" ;
+VAL_ 2 Read_MS_Coil_Enable_MS 65280 "on" 0 "off" ;
+VAL_ 2 Read_MS_Coil_Link_Mode 65280 "Master" 0 "Slave" ;
+VAL_ 2 Read_MS_Condition 65535 "init OK" 65533 "different models detected" 1 "init running" 0 "not initialised" ;
+VAL_ 2 Read_Coil_DC_After_Remote 65280 "on" 0 "off" ;
+VAL_ 2 Read_MS_Coil_Termination 65280 "on" 0 "off" ;
+VAL_ 2 Read_MS_Coil_Termination_BIAS 65280 "on" 0 "off" ;
+VAL_ 2 Read_Mux 527 "Count of SF alarms" 667 "Master-slave: BIAS" 666 "Master-slave: Termination" 511 "Device state 2" 425 "DC output after remote" 662 "Master-slave: Number of slaves" 660 "Master-slave: Total power" 658 "Master-slave: Total current" 656 "Master-slave: Total voltage" 655 "Master-slave: Condition" 653 "Master-slave: Enable MS" 650 "Master-slave: Link mode" 65535 "Error Message" 9004 "Upper limit of power set value" 9003 "Lower limit of current set value" 9002 "Upper limit of current set value" 9001 "Lower limit of voltage set value" 9000 "Upper limit of voltage set value" 556 "Overpower protection threshold" 553 "Overcurrent protection threshold" 550 "Overvoltage protection threshold" 524 "Count of PF alarms" 523 "Count of OT alarms" 522 "Count of OP alarms" 521 "Count of OC alarms" 520 "Count of OV alarms" 509 "Actual power" 508 "Actual current" 507 "Actual voltage" 505 "Device state" 501 "Set current value" 500 "Set voltage value" 418 "AI: REM-SB action" 417 "AI: REM-SB level" 416 "AI: Reference voltage (pin VREF)" 408 "DC  output after power ON" 407 "DC output after PF alarm" 405 "DC output" 231 "Firmware version (DR)" 211 "Firmware version (HMI)" 191 "Firmware version (KE)" 171 "User text" 151 "Serial no." 131 "Article no." 125 "Nominal power" 123 "Nominal current" 121 "Nominal voltage" 101 "Manufacturer website" 81 "Manufacterer phone number" 61 "Manufacturer ZIP code" 41 "Manufacturer address" 21 "Manufacturer" 1 "Device type" 502 "Set power value" 402 "Remote mode" 0 "Device class" ;
+VAL_ 1 Query_Mux 667 "Master-slave: BIAS" 666 "Master-slave: Termination" 527 "Count of SF alarms" 511 "Device state 2" 425 "DC output after remote" 662 "Master-slave: Number slaves" 660 "Master-slave: Total power" 658 "Master-slave: Total current" 656 "Master-slave: Total voltage" 655 "Master-slave: Condition" 653 "Master-slave: Enable MS" 650 "Master-slave: Link mode" 65535 "Error Message" 9004 "Upper limit of power set value" 9003 "Lower limit of current set value" 9002 "Upper limit of current set value" 9001 "Lower limit of voltage set value" 9000 "Upper limit of voltage set value" 556 "Overpower protection threshold" 553 "Overcurrent protection threshold" 550 "Overvoltage protection threshold" 524 "Count of PF alarms" 523 "Count of OT alarms" 522 "Count of OP alarms" 521 "Count of OC alarms" 520 "Count of OV alarms" 509 "Actual power" 508 "Actual current" 507 "Actual voltage" 505 "Device state" 501 "Set current value " 500 "Set voltage value" 418 "AI: REM-SB action" 417 "AI: REM-SB level" 416 "AI: Reference voltage (pin VREF)" 408 "DC output after power ON" 407 "DC output after power PF alarm" 405 "DC output" 231 "Firmware version (DR)" 211 "Firmware version (HMI)" 191 "Firmware version (KE)" 171 "User text" 151 "Serial no." 131 "Article no." 125 "Nominal power" 123 "Nominal current" 121 "Nominal voltage" 101 "Manufacturer website" 81 "Manufacterer phone number" 61 "Manufacturer ZIP code" 41 "Manufacturer address" 21 "Manufacturer" 1 "Device type" 502 "Set power value" 402 "Remote mode" 0 "Device class" ;
+VAL_ 0 Send_Coil_DC_Output 65280 "on" 0 "off" ;
+VAL_ 0 Send_Coil_Remote_On_Off 65280 "on" 0 "off" ;
+VAL_ 0 Send_Coil_Ack_Alarms 65280 "acknowledge" ;
+VAL_ 0 Send_Coil_AI_REM_SB_Action 65280 "DC auto" 0 "DC off" ;
+VAL_ 0 Send_Coil_AI_REM_SB_Level 65280 "inverted" 0 "normal" ;
+VAL_ 0 Send_Coil_AI_VREF 65280 "5V" 0 "10V" ;
+VAL_ 0 Send_Coil_DC_After_PF_Alarm 65280 "auto-on" 0 "off" ;
+VAL_ 0 Send_Coil_DC_After_Power_On 65535 "off" 65534 "restore" ;
+VAL_ 0 Send_Coil_Restart 65280 "execute" ;
+VAL_ 0 Send_MS_Coil_Enable_MS 65280 "on" 0 "off" ;
+VAL_ 0 Send_MS_Coil_Init_MS 65280 "Start init" ;
+VAL_ 0 Send_MS_Coil_Link_Mode 65280 "Master" 0 "Slave" ;
+VAL_ 0 Send_Coil_DC_After_Remote 65280 "on" 0 "off" ;
+VAL_ 0 Send_MS_Coil_Termination 65280 "on" 0 "off" ;
+VAL_ 0 Send_MS_Coil_Termination_BIAS 65280 "on" 0 "off" ;
+VAL_ 0 Send_Mux 667 "Master-slave: BIAS" 666 "Master-slave: Termination" 425 "DC output after remote" 654 "Master-slave: Init MS" 653 "Master-slave: Enable MS" 650 "Master-slave: Link mode" 9004 "Upper limit of power set value" 9003 "Lower limit of current set value" 9002 "Upper limit of current set value" 9001 "Lower limit of voltage set value" 9000 "Upper limit of voltage set value" 556 "Overpower protection threshold" 553 "Overcurrent protection threshold" 550 "Overvoltage protection threshold" 501 "Set current value" 500 "Set voltage value" 418 "AI: REM-SB action" 417 "AI: REM-SB level" 416 "AI: Reference voltage (pin VREF)" 411 "Acknowledge alarms" 410 "Restart of the device" 408 "DC output after power ON" 407 "DC output after PF alarm" 405 "DC output" 171 "User text" 502 "Set power value" 402 "Remote mode" ;
+VAL_ 256 Read_Status_Reg_Act_Cyclic 1 "CR" 3 "CP" 2 "CC" 0 "CV" ;
+VAL_ 256 Read_Status_DC_Output_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_MS_Type_Cyclic 1 "Master" 0 "Slave" ;
+VAL_ 256 Read_Status_Ext_Sense_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_REM_SB_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_PF_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_OVP_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_OT_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_OPP_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Access_Cyclic 25 "CAN" 8 "Master/Slave" 5 "analog" 3 "USB" 2 "remote" 1 "local" 0 "free" ;
+VAL_ 256 Read_Status_Alarm_OCP_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarm_MSS_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Alarms_Cyclic 1 "Alarm" 0 "No alarm" ;
+VAL_ 256 Read_Coil_DC_Output_Cyclic 1 "on" 0 "off" ;
+VAL_ 256 Read_Status_Remote_Cyclic 1 "on" 0 "off" ;
+VAL_ 512 Send_Coil_Remote_On_Off_Cyclic 1 "on" 0 "off" ;
+VAL_ 512 Send_Coil_DC_Output_Cyclic 1 "on" 0 "off" ;
+VAL_ 512 Send_Coil_Ack_Alarms_Cyclic 1 "acknowledge" ;
+VAL_ 514 HEX_SIZE 0 "" ;
+VAL_ 514 HEX_CRC 0 "" ;
+VAL_ 514 NODE_ID 0 "PEDAL" 1 "REFRI" 2 "LVBMS" 3 "ECU" 4 "STEER" ;
+VAL_ 514 BOOT_CMD 0 "BOOT_INIT" 1 "TRANSMIT_START" 2 "TRANSMIT_END" 3 "deprecated" ;
+VAL_ 18 CURRENT_OK 0 "FAULT" 1 "OK" ;
+VAL_ 18 TEMPS_OK 0 "FAULT" 1 "OK" ;
+VAL_ 18 VOLTAGES_OK 0 "FAULT" 1 "OK" ;
+VAL_ 18 STATUS 0 "FAULT" 1 "OK" ;
+VAL_ 37 AS_ALLOWED 0 "OFF" 1 "ON" ;
+VAL_ 37 STATE 0 "WAIT_SL" 1 "READY2PRECH" 2 "PRECHARGING" 3 "PRECHARGED" 4 "DRIVING" ;
+VAL_ 38 DV_MISSION_REQ 0 "MANUAL" 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPECTION" 6 "AUTOCROSS" ;
+VAL_ 38 TRACTION_CONTROL 0 "OFF" ;
+VAL_ 38 SCS_ENABLE 0 "DISABLE" 1 "ENABLE" ;
+VAL_ 38 REGEN_MODE 0 "APPS" 1 "FREE" 2 "BRAKE" ;
+VAL_ 38 REGEN_ENABLE 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 38 LIMITER 0 "TORQUE" 1 "SPEED" 2 "POWER" ;
+VAL_ 38 FLAP_R_REVERSE 0 "NORMAL" 1 "REVERSE" ;
+VAL_ 38 FLAP_L_REVERSE 0 "NORMAL" 1 "REVERSE" ;
+VAL_ 38 FLAP_ENABLE 0 "OFF" 1 "ON" ;
+VAL_ 38 EEPROM 252 "CLEAR_AND_DEFAULT_ALL" 255 "READ_ALL" 254 "SAVE_ALL" ;
+VAL_ 38 DRIVING_MODE 0 "LINEAL" 1 "TORQUE_VECTORING" 2 "DV_TORQUE_REQUEST" ;
+VAL_ 38 ENTRY 0 "SCS_ENABLE" 1 "R2D_BRAKE_VAL" 2 "LIMITER" 3 "DRIVING_MODE" 4 "TRACTION_CONTROL" 5 "TRQV_KP" 6 "TRQV_KI" 7 "TRQV_KD" 8 "TRQ_LIMIT" 9 "EEPROM" 10 "FLAP_L_OFFSET" 11 "FLAP_R_OFFSET" 12 "FLAP_L_REVERSE" 13 "FLAP_R_REVERSE" 14 "FLAP_ENABLE" 15 "FLAP_PEDAL_SETPOINT" 16 "REGEN_ENABLE" 17 "REGEN_MAX_TRQ" 18 "REGEN_MAX_CELL_VOLT" 19 "REGEN_MAX_CELL_TEMP" 20 "REGEN_MAX_CURRENT" 21 "REGEN_THR_SPEED" 22 "REGEN_THR_RPM" 23 "REGEN_TRQ_SLOPE" 24 "REGEN_MODE" 25 "REGEN_MAX_POSITIVE_TRQ_THR" 26 "DV_MISSION_REQ" ;
+VAL_ 31 POWER_ACCU 0 "OFF" 1 "ON" ;
+VAL_ 31 POWER 0 "OFF" 1 "ON" ;
+VAL_ 31 MODE_ACCU 0 "AUTO" 1 "MANUAL" ;
+VAL_ 31 MODE 0 "AUTO" 1 "MANUAL" ;
+VAL_ 31 ENTRY 0 "POWER" 1 "INTENSITY" 2 "MODE" 3 "TARGET_TEMP" 4 "POWER_ACCU" 5 "INTENSITY_ACCU" 6 "MODE_ACCU" 7 "TARGET_TEMP_ACCU" ;
+VAL_ 33 MODE 0 "AUTO" 1 "MANUAL" ;
+VAL_ 48 Curve 0 "CURVE_1" 1 "CURVE_2" 2 "CURVE_3" 3 "CURVE_4" 4 "CURVE_5" 5 "MANUAL" ;
+VAL_ 48 Mode 0 "AUTO" 1 "MANUAL" ;
+VAL_ 48 State 0 "IDLE" 1 "READY" 2 "PRECHARGING" 3 "PRECHARGED" 4 "CHARGING" ;
+VAL_ 1283 ASB_redundancy_state 1 "ASB_redundancy_state_deactivated" 2 "ASB_redundancy_state_engaged" 3 "ASB_redundancy_state_initial_checkup_passed" ;
+VAL_ 1283 Steering_state 0 "unavailable" 1 "available" ;
+VAL_ 1283 AMI_state 1 "AMI_state_acceleration" 2 "AMI_state_skidpad" 3 "AMI_state_trackdrive" 4 "AMI_state_braketest" 5 "AMI_state_inspection" 6 "AMI_state_autocross" 0 "AMI_state_manual" ;
+VAL_ 1283 AS_EBS_state 1 "AS_EBS_state_deactivated" 2 "AS_EBS_state_initial_checkup_passed" 3 "AS_EBS_state_activated" ;
+VAL_ 1283 AS_status 1 "AS_status_off" 2 "AS_status_ready" 3 "AS_status_driving" 4 "AS_status_emergency" 5 "AS_status_finished" ;
+VAL_ 1809 data_byte 0 "ALIVE" ;
+VAL_ 2147494264 error_code 0 "OK" 1 "OVERTEMP" 2 "OVERCURRENT" 3 "OVERVOLTAGE" 4 "UNDERVOLTAGE" 5 "ENCODER_FAULT" 6 "POWERSTAGE_OVERTEMP" 7 "MOTOR_STALL" ;
+VAL_ 49 mode_req 0 "AUTO" 1 "MANUAL" ;
+VAL_ 8 ASB_ENERGY_STATUS 0 "UNAVAILABLE" 1 "AVAILABLE" ;
+VAL_ 8 ASB_BREAK_STATUS 0 "OFF" 1 "ON" ;
+VAL_ 8 ASB_redundancy_state 0 "DEACTIVATED" 1 "INITIAL_CHECK_PASSED" 2 "ACTIVATED" ;
+VAL_ 8 ASB_EBS_state 0 "DEACTIVATED" 1 "INITIAL_CHECK_PASSED" 2 "ACTIVATED" ;
+VAL_ 10 state_req 0 "DISABLED" 1 "SELF_CHECK" 2 "ENABLED" ;
+VAL_ 11 state_req 0 "DISABLED" 1 "SELF_CHECK" 2 "ENABLED" ;
+VAL_ 12 MISSION 0 "MANUAL" 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPECTION" 6 "AUTOCROSS" ;
+VAL_ 12 MISSION_STATUS 0 "NONE" 1 "SELECTED" 2 "READY" 3 "RUNNING" 4 "FINISHED" 5 "FAILED" ;
+VAL_ 13 ASB_BRAKE_REQ 0 "DISABLED" 1 "ENABLED" ;
+VAL_ 14 MISSION_REQ 0 "MANUAL" 1 "ACCELERATION" 2 "SKIDPAD" 3 "TRACKDRIVE" 4 "BRAKETEST" 5 "INSPECTION" 6 "AUTOCROSS" 7 "REMOTE_CONTROL" ;
+VAL_ 14 ENTRY 0 "MISSION_REQ" ;
+VAL_ 15 BRAKE 0 "DISABLED" 1 "ENABLED" ;
+VAL_ 864 Contactor_4_Req 1 "Contactor ON" 0 "Contactor OFF" ;
+VAL_ 864 Contactor_3_Req 1 "Contactor ON" 0 "Contactor OFF" ;
+VAL_ 864 Contactor_2_Req 1 "Contactor ON" 0 "Contactor OFF" ;
+VAL_ 864 Contactor_1_Req 1 "Contactor ON" 0 "Contactor OFF" ;
+VAL_ 864 App_State_Req 1 "INIT" 2 "POST" 3 "STANDBY" 4 "HV_READY_PRECHARGE" 5 "HV_READY" 6 "HV_CHARGE_PRECHARGE" 7 "HV_CHARGE" 8 "HV_SHUTDOWN" 9 "SOFTFAULT" 10 "HARDFAULT" ;
+VAL_ 1122 DIO4_State 1 "HIGH" 0 "LOW" ;
+VAL_ 1122 DIO3_State 1 "HIGH" 0 "LOW" ;
+VAL_ 1122 DIO2_State 1 "HIGH" 0 "LOW" ;
+VAL_ 1122 DIO1_State 1 "HIGH" 0 "LOW" ;
+VAL_ 1122 App_State_App 12 "Off" 11 "Shutdown" 10 "Fault Hard" 9 "Fault Soft" 8 "HV Shutdown" 7 "HV Charge" 6 "HV Precharge Charge" 5 "HV Ready" 4 "HV Precharge Ready" 3 "Standby" 2 "POST" 1 "Init" 0 "Unknown" ;
+SIG_VALTYPE_ 2 Read_MS_Total_Voltage : 1;
+SIG_VALTYPE_ 2 Read_MS_Total_Power : 1;
+SIG_VALTYPE_ 2 Read_MS_Total_Current : 1;
+SIG_VALTYPE_ 2 Read_Nominal_Voltage : 1;
+SIG_VALTYPE_ 2 Read_Nominal_Power : 1;
+SIG_VALTYPE_ 2 Read_Nominal_Current : 1;
+SIG_GROUP_ 2 Read_Alarms 1 : Read_Alarm_Count_SF Read_Alarm_Count_PF Read_Alarm_Count_OV Read_Alarm_Count_OT Read_Alarm_Count_OP Read_Alarm_Count_OC;
+SIG_GROUP_ 2 Master_Slave 1 : Read_MS_Coil_Termination Read_MS_Coil_Termination_BIAS Read_MS_Total_Voltage Read_MS_Total_Power Read_MS_Total_Current Read_MS_Units Read_MS_Condition Read_MS_Coil_Link_Mode Read_MS_Coil_Enable_MS;
+SIG_GROUP_ 2 Error 1 : Read_Last_Com_Errror;
+SIG_GROUP_ 2 Control 1 : Read_Coil_DC_After_Remote Read_Coil_Remote Read_Coil_DC_After_Power_On Read_Coil_DC_Output Read_Coil_DC_After_PF_Alarm Read_Coil_AI_VREF Read_Coil_AI_REM_SB_Level Read_Coil_AI_REM_SB_Action;
+SIG_GROUP_ 2 Limits 1 : Read_Limit_Umin Read_Limit_Umax Read_Limit_Pmax Read_Limit_Imin Read_Limit_Imax;
+SIG_GROUP_ 2 Protection 1 : Read_Protection_OVP Read_Protection_OPP Read_Protection_OCP;
+SIG_GROUP_ 2 Nominal_Values 1 : Read_Nominal_Voltage Read_Nominal_Power Read_Nominal_Current;
+SIG_GROUP_ 2 Set_Values 1 : Read_Power Read_Current Read_Voltage;
+SIG_GROUP_ 2 Status 1 : Read_Status_Remote Read_Status_Alarm_SF Read_Status_DC_Output Read_Status_Alarm_OVP Read_Status_Alarm_OCP Read_Status_Alarm_OPP Read_Status_Alarm_OT Read_Status_Alarm_PF Read_Status_Alarm_REM_SB Read_Status_Alarm_MSS Read_Status_Ext_Sense Read_Status_MS_Type Read_Status_Access Read_Status_Alarms Read_Status_Reg_Act;
+SIG_GROUP_ 2 Actual_Values 1 : Read_Actual_Current Read_Actual_Power Read_Actual_Voltage;
+SIG_GROUP_ 0 Master_Slave 1 : Send_MS_Coil_Termination_BIAS Send_MS_Coil_Termination Send_MS_Coil_Link_Mode Send_MS_Coil_Init_MS Send_MS_Coil_Enable_MS;
+SIG_GROUP_ 0 Limits 1 : Send_Limit_Imin Send_Limit_Imax Send_Limit_Pmax Send_Limit_Umin Send_Limit_Umax;
+SIG_GROUP_ 0 Protection 1 : Send_Protection_OVP Send_Protection_OPP Send_Protection_OCP;
+SIG_GROUP_ 0 Set_Values 1 : Send_Current Send_Voltage Send_Power;
+SIG_GROUP_ 0 Control 1 : Send_Coil_DC_After_Remote Send_Coil_Restart Send_Coil_DC_After_Power_On Send_Coil_DC_After_PF_Alarm Send_Coil_AI_VREF Send_Coil_AI_REM_SB_Level Send_Coil_AI_REM_SB_Action Send_Coil_Ack_Alarms Send_Coil_Remote_On_Off Send_Coil_DC_Output;
+

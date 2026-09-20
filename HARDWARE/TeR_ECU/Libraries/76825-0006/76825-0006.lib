@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 76825-0006
+#/284886/1863104/2.50/6/3/Connector
+DEF 76825-0006 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "76825-0006" 650 200 50 H V L CNN
+F2 "768250006" 650 100 50 H I L CNN
+F3 "http://www.molex.com/pdm_docs/sd/768250006_sd.pdf" 650 0 50 H I L CNN
+F4 "Connector Header Through Hole, Right Angle 6 position 0.224\" (5.70mm)" 650 -100 50 H I L CNN "Description"
+F5 "15.03" 650 -200 50 H I L CNN "Height"
+F6 "538-76825-0006" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Molex/76825-0006?qs=KpdAywxU0127%252BKA4qQrPHA%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Molex" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "76825-0006" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 -200 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 0 200 R 50 50 0 0 P
+X 4 4 800 -200 200 L 50 50 0 0 P
+X 5 5 800 -100 200 L 50 50 0 0 P
+X 6 6 800 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

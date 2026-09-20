@@ -22,7 +22,10 @@
 // ── Parámetros del Modelo de Neumático y Aero ─────────
 #define GP_C_ALPHA_F 35000.0f
 #define GP_C_ALPHA_R 32000.0f
-#define GP_MU_NOM    1.5f     
+#define GP_MU_NOM    1.50f     // Coeficiente de fricción estático (pico)
+#define GP_MU_SLIDE  1.25f     // Coeficiente de fricción cinético (post-pico deslizante)
+#define GP_MU_DEG_FZ 0.00012f  // Degresividad de fricción por carga vertical [1/N]
+#define GP_MAX_TRQ_ACT 250.0f  // Límite físico absoluto del inversor/motor [Nm]
 #define GP_P_MAX_WHL 20000.0f 
 #define GP_AERO_CL_REAR 2.27f  // Coeficiente de Lift (Downforce) trasero
 #define GP_AERO_AREA    1.10f  // Área frontal de referencia [m2]

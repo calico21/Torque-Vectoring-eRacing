@@ -178,8 +178,16 @@ void gp_tv_step(
     
     float mu_avg = 0.5f * (state->tc.mu_surface[0] + state->tc.mu_surface[1]);
 
+    // 1. Desacoplar la potencia eléctrica de la resonancia torsional mecánica del palier (15 Hz)
+    // El límite de potencia del inversor responde a la velocidad cinemática de traslación del vehículo
+    float omega_power[4];
+    float w_chassis = vx_safe / GP_R_WHEEL;
+    for (int i = 0; i < 4; i++) {
+        omega_power[i] = 0.85f * w_chassis + 0.15f * omega[i];
+    }
+
     gp_friction_ellipse_t_ub(fz_est, fy_est, mu_avg, t_ub_friction);
-    gp_power_limited_t_ub(omega, t_ub_power);
+    gp_power_limited_t_ub(omega_power, t_ub_power);
     
     float temp_limit = 75.0f;
     float derate_rl = 1.0f - gp_sigmoid((temp_inv_rl - temp_limit) * 0.5f);
@@ -188,29 +196,36 @@ void gp_tv_step(
     t_ub_power[GP_RL] *= derate_rl;
     t_ub_power[GP_RR] *= derate_rr;
 
-    // filtro superior de los límites de par para evitar cambios durillos
-    float alpha_ub = GP_CLAMP(dt / (0.010f + dt), 0.0f, 1.0f);
+    // 2. Filtro paso bajo combinado (tau = 30 ms) que atenúa oscilaciones mecánicas parásitas
+    float alpha_ub = GP_CLAMP(dt / (0.030f + dt), 0.0f, 1.0f);
     
-    state->t_ub_rl_filt += alpha_ub * (t_ub_friction[GP_RL] - state->t_ub_rl_filt);
-    state->t_ub_rr_filt += alpha_ub * (t_ub_friction[GP_RR] - state->t_ub_rr_filt);
+    // Filtrar el límite real efectivo (mínimo entre adherencia de neumático y potencia eléctrica)
+    float raw_ub_rl = GP_MIN(t_ub_friction[GP_RL], t_ub_power[GP_RL]);
+    float raw_ub_rr = GP_MIN(t_ub_friction[GP_RR], t_ub_power[GP_RR]);
+
+    state->t_ub_rl_filt += alpha_ub * (raw_ub_rl - state->t_ub_rl_filt);
+    state->t_ub_rr_filt += alpha_ub * (raw_ub_rr - state->t_ub_rr_filt);
 
     float t_ub[4];
     t_ub[GP_FL] = 0.0f;
     t_ub[GP_FR] = 0.0f;
-    t_ub[GP_RL] = GP_MIN(state->t_ub_rl_filt, t_ub_power[GP_RL]);
-    t_ub[GP_RR] = GP_MIN(state->t_ub_rr_filt, t_ub_power[GP_RR]);
+    t_ub[GP_RL] = state->t_ub_rl_filt;
+    t_ub[GP_RR] = state->t_ub_rr_filt;
 
     if (rg->enable) {
         float t_lb_power[4];
-        gp_power_limited_t_lb(omega, rg->max_charge_power_w, t_lb_power);
+        gp_power_limited_t_lb(omega_power, rg->max_charge_power_w, t_lb_power);
         t_lb_power[GP_RL] *= derate_rl;
         t_lb_power[GP_RR] *= derate_rr;
 
-        state->t_lb_rl_filt += alpha_ub * (t_ub_friction[GP_RL] - state->t_lb_rl_filt);
-        state->t_lb_rr_filt += alpha_ub * (t_ub_friction[GP_RR] - state->t_lb_rr_filt);
+        float raw_lb_rl = GP_MIN(t_ub_friction[GP_RL], t_lb_power[GP_RL]);
+        float raw_lb_rr = GP_MIN(t_ub_friction[GP_RR], t_lb_power[GP_RR]);
 
-        float lb_mag_rl = GP_MIN(state->t_lb_rl_filt, t_lb_power[GP_RL]);
-        float lb_mag_rr = GP_MIN(state->t_lb_rr_filt, t_lb_power[GP_RR]);
+        state->t_lb_rl_filt += alpha_ub * (raw_lb_rl - state->t_lb_rl_filt);
+        state->t_lb_rr_filt += alpha_ub * (raw_lb_rr - state->t_lb_rr_filt);
+
+        float lb_mag_rl = state->t_lb_rl_filt;
+        float lb_mag_rr = state->t_lb_rr_filt;
 
         float mag_sum = lb_mag_rl + lb_mag_rr;
         if (mag_sum > 1e-3f) {

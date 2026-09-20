@@ -71,12 +71,13 @@ class TVState(ctypes.Structure):
         ("mz_sat_ratio",   ctypes.c_float),
         ("vy_gps_last",    ctypes.c_float),
         ("vy_gps_age_ms",  ctypes.c_float),
-        ("ax_filt",        ctypes.c_float),   # new
-        ("ay_filt",        ctypes.c_float),   # new
-        ("t_ub_rl_filt",   ctypes.c_float),   # new
-        ("t_ub_rr_filt",   ctypes.c_float),   # new
-        ("t_lb_rl_filt",   ctypes.c_float),   # NEW: filtered regen (negative) bound RL
-        ("t_lb_rr_filt",   ctypes.c_float),   # NEW: filtered regen (negative) bound RR
+        ("ax_filt",        ctypes.c_float),
+        ("ay_filt",        ctypes.c_float),
+        ("t_ub_rl_filt",   ctypes.c_float),
+        ("t_ub_rr_filt",   ctypes.c_float),
+        ("t_lb_rl_filt",   ctypes.c_float),
+        ("t_lb_rr_filt",   ctypes.c_float),
+        ("qp_residual",    ctypes.c_float),   
     ]
 
 # Structural Safety Assertions

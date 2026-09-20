@@ -569,7 +569,7 @@ def run_regen_budget_ramp():
         rg = default_regen_limits(enable=1, max_total_trq=budget, max_charge_power_w=40000.0)
 
         vx, delta, wz, ay = 20.0, 0.15, 0.3, 2.0
-        fx = -250.0  # constant heavy regen demand throughout
+        fx = -2000.0  # demanda real de frenada (~400 Nm de par total)
         w_rear = vx / 0.2032
         omega_c = (ctypes.c_float * 4)(0.0, 0.0, w_rear, w_rear)
         t_out_c = (ctypes.c_float * 4)()

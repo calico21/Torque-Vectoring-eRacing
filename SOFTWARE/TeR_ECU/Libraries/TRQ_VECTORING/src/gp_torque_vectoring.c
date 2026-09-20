@@ -7,9 +7,14 @@
 #include "gp_ekf.h"  
 
 // Función auxiliar de saturación suave para el presupuesto de regeneración
-static inline float gp_soft_cap(float val, float limit, float alpha) {
-    if (val <= 0.0f) return 0.0f;
-    return limit * tanhf(val * alpha / limit);
+// Saturación suave hacia el límite de regeneración: transparente en zona lineal, asintótica en el techo
+static inline float gp_soft_cap(float val, float limit, float margin) {
+    if (val <= 0.0f || limit <= 0.0f) return 0.0f;
+    if (val <= limit - margin) {
+        return val; // Demanda dentro del presupuesto: 100% de eficiencia, sin recortar nada
+    }
+    float excess = val - (limit - margin);
+    return (limit - margin) + margin * tanhf(excess / (margin + 1e-3f));
 }
 
 #if defined(__arm__) || defined(__ARM_ARCH)
@@ -227,8 +232,8 @@ void gp_tv_step(
 
         float mag_sum = lb_mag_rl + lb_mag_rr;
         if (mag_sum > 1e-3f) {
-            float capped_sum = gp_soft_cap(mag_sum, rg->max_total_trq,
-                                            1.0f / GP_REGEN_SOFTNESS);
+            // Margen de redondeo suave de 15 Nm antes de saturar el presupuesto
+            float capped_sum = gp_soft_cap(mag_sum, rg->max_total_trq, 15.0f);
             float scale = capped_sum / mag_sum;
             lb_mag_rl *= scale;
             lb_mag_rr *= scale;
@@ -294,10 +299,9 @@ void gp_tv_step(
         float neg_rr = GP_MIN(t_cmd_out[GP_RR], 0.0f);
         float neg_mag = fabsf(neg_rl) + fabsf(neg_rr);
 
-        if (neg_mag > 1e-3f) {
-            float capped_mag = gp_soft_cap(neg_mag, rg->max_total_trq,
-                                            1.0f / GP_REGEN_SOFTNESS);
-            float scale = capped_mag / neg_mag;
+        // Solo intervenir si por dinámica de rate-limiter se ha rebasado el presupuesto
+        if (neg_mag > rg->max_total_trq && neg_mag > 1e-3f) {
+            float scale = rg->max_total_trq / neg_mag;
 
             if (t_cmd_out[GP_RL] < 0.0f) t_cmd_out[GP_RL] *= scale;
             if (t_cmd_out[GP_RR] < 0.0f) t_cmd_out[GP_RR] *= scale;

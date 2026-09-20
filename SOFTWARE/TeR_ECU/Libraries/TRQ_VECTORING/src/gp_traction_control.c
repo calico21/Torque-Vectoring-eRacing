@@ -48,14 +48,16 @@ void gp_tc_step(
 ) {
     float t_mean_abs = (fabsf(t_req_out[GP_RL]) + fabsf(t_req_out[GP_RR])) * 0.5f;
     
-    float omega_ema_rl = 0.1f * omega[GP_RL] + 0.9f * state->omega_prev_ema[GP_RL];
+    // 1. Filtrado EMA rápido (tau ~ 25 ms) para eliminar el ruido blanco de los encoders (sigma=2.5 rad/s)
+    // antes de diferenciar, impidiendo que la derivada angular supere falsamente los 250 rad/s^2
+    float omega_ema_rl = 0.15f * omega[GP_RL] + 0.85f * state->omega_prev_ema[GP_RL];
     float raw_omega_dot_rl = (omega_ema_rl - state->omega_prev_ema[GP_RL]) / dt;
 
-    float omega_ema_rr = 0.1f * omega[GP_RR] + 0.9f * state->omega_prev_ema[GP_RR];
+    float omega_ema_rr = 0.15f * omega[GP_RR] + 0.85f * state->omega_prev_ema[GP_RR];
     float raw_omega_dot_rr = (omega_ema_rr - state->omega_prev_ema[GP_RR]) / dt;
 
-    float omega_dot_rl = GP_CLAMP(raw_omega_dot_rl, -5000.0f, 5000.0f);
-    float omega_dot_rr = GP_CLAMP(raw_omega_dot_rr, -5000.0f, 5000.0f);
+    float omega_dot_rl = GP_CLAMP(raw_omega_dot_rl, -2000.0f, 2000.0f);
+    float omega_dot_rr = GP_CLAMP(raw_omega_dot_rr, -2000.0f, 2000.0f);
 
     float fx_rl = (t_req_out[GP_RL] - GP_I_WHEEL_EST * omega_dot_rl) / GP_R_WHEEL;
     float fx_rr = (t_req_out[GP_RR] - GP_I_WHEEL_EST * omega_dot_rr) / GP_R_WHEEL;
@@ -110,6 +112,7 @@ void gp_tc_step(
         state->kappa_prev[i] = state->kappa_filt[i];
         state->fx_prev[i] = fx_wheels[i];
         
+        // Identificación RLS de rigidez de neumático
         float max_physical_dkappa = 0.30f * dt / 0.005f;
         if (fabsf(d_kappa) > 0.0001f && fabsf(d_kappa) < max_physical_dkappa && vx > 2.0f) {
             float lambda = 0.985f; 
@@ -135,8 +138,11 @@ void gp_tc_step(
                              
         float secant_ok = gp_sigmoid(fabsf(dtheta) / 500.0f - 2.0f);
         
-        float lr = 0.000005f; 
-        float kappa_grad = state->kappa_opt[i] + lr * state->rls_theta[i] * dt;
+        // 2. Descenso de gradiente normalizado para kappa_opt
+        float theta_mag = fabsf(state->rls_theta[i]);
+        float grad_dir = state->rls_theta[i] / (theta_mag + 5000.0f);
+        float lr_norm = 0.03f;
+        float kappa_grad = state->kappa_opt[i] + lr_norm * grad_dir * dt;
 
         state->kappa_opt[i] = secant_ok * GP_CLAMP(kappa_secant, 0.05f, 0.22f) + 
                               (1.0f - secant_ok) * GP_CLAMP(kappa_grad, 0.05f, 0.22f);
@@ -149,32 +155,36 @@ void gp_tc_step(
 
         float error = kappa_meas_mag - kappa_target_mag; 
         
+        // 3. Integrador con vaciado asimétrico para transitorios y pianos
         float raw_integral = state->pi_integral[i] + error * dt * speed_gate;
         state->pi_integral[i] = GP_TC_I_MAX * tanhf(raw_integral / GP_TC_I_MAX); 
-        state->pi_integral[i] *= (1.0f - 0.002f); 
+        if (error < 0.0f) {
+            state->pi_integral[i] *= (1.0f - 0.08f); // Vaciado rápido al recuperar tracción
+        } else {
+            state->pi_integral[i] *= (1.0f - 0.002f);
+        }
         
         float pi_out = kp_eff * error + ki_eff * state->pi_integral[i];
         
-        float omega_ema = 0.1f * omega[i] + 0.9f * state->omega_prev_ema[i];
-        float omega_dot = (omega_ema - state->omega_prev_ema[i]) / dt;
-
-        state->omega_prev_ema[i] = omega_ema;
+        float omega_dot = (i == GP_RL) ? omega_dot_rl : omega_dot_rr;
+        state->omega_prev_ema[i] = (i == GP_RL) ? omega_ema_rl : omega_ema_rr;
         state->omega_last_raw[i] = omega[i];
         
-        float error_gate = gp_sigmoid(error * 50.0f); 
+        // 4. Compuerta estricta: solo activar recorte por derivada si hay deslizamiento positivo real
+        float error_gate = gp_sigmoid(error * 40.0f); 
 
-        float deriv_kick_pos = 20.0f * gp_softplus((omega_dot - 250.0f) * 0.05f);
-        float deriv_kick_neg = 20.0f * gp_softplus((-omega_dot - 250.0f) * 0.05f);
-        float deriv_kick = 2.0f * ((sign_i > 0.0f) ? deriv_kick_pos : deriv_kick_neg);
+        float deriv_kick_pos = 12.0f * gp_softplus((omega_dot - 250.0f) * 0.05f);
+        float deriv_kick_neg = 12.0f * gp_softplus((-omega_dot - 250.0f) * 0.05f);
+        float deriv_kick = GP_CLAMP(2.0f * ((sign_i > 0.0f) ? deriv_kick_pos : deriv_kick_neg), 0.0f, 40.0f);
 
-        pi_out -= deriv_kick * error_gate; 
+        // Añadir deriv_kick únicamente ponderado por la compuerta de error de slip real
+        pi_out += deriv_kick * error_gate; 
         
         float reduction = speed_gate * gp_softplus(pi_out * GP_TC_CLAMP_BETA) / GP_TC_CLAMP_BETA;
 
         float mag_cmd = mag_in - reduction;
         float mag_out = gp_softplus(mag_cmd * GP_TC_CLAMP_BETA) / GP_TC_CLAMP_BETA;
 
-        // solo puede reducir el par, no aumentarlo (IMPORTANTE)
         mag_out = GP_MIN(mag_out, mag_in);
 
         t_req_out[i] = sign_i * mag_out;

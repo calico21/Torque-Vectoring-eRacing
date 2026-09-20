@@ -43,7 +43,7 @@ void gp_ekf_update_gps(
 
 void gp_ekf_update_kinematic_ss(
     gp_ekf_t* ekf,
-    float ay_filt, float wz_raw, float vx
+    float ax_filt, float ay_filt, float wz_raw, float vx
 );
 
 void gp_ekf_update_friction(

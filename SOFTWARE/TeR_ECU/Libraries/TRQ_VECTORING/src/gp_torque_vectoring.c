@@ -65,11 +65,9 @@ void gp_tv_init(tv_state_t* state) {
     state->ay_filt = 0.0f;
     state->t_ub_rl_filt = 0.0f;
     state->t_ub_rr_filt = 0.0f;
-    
-    state->t_ub_rl_filt = 0.0f;
-    state->t_ub_rr_filt = 0.0f;
     state->t_lb_rl_filt = 0.0f;
     state->t_lb_rr_filt = 0.0f;
+    state->qp_residual = 0.0f;
 
     float h = GP_W_REG + GP_W_SMOOTH;
     float a_sq = 2.0f / (GP_R_WHEEL * GP_R_WHEEL);
@@ -124,7 +122,7 @@ void gp_tv_step(
     gp_ekf_predict(&state->ekf, delta, state->ax_filt, state->ay_filt, wz, vx, dt);
 
     gp_ekf_update_gps(&state->ekf, vy_gps, gps_valid);
-    gp_ekf_update_kinematic_ss(&state->ekf, state->ay_filt, wz, vx);
+    gp_ekf_update_kinematic_ss(&state->ekf, state->ax_filt, state->ay_filt, wz, vx);
 
     vy = state->ekf.x[GP_EKF_STATE_VY];
     float wz_corr = state->ekf.wz_corrected;  // Gyro bias compensated yaw rate
@@ -178,12 +176,12 @@ void gp_tv_step(
     
     float mu_avg = 0.5f * (state->tc.mu_surface[0] + state->tc.mu_surface[1]);
 
-    // 1. Desacoplar la potencia eléctrica de la resonancia torsional mecánica del palier (15 Hz)
-    // El límite de potencia del inversor responde a la velocidad cinemática de traslación del vehículo
+    // 1. Desacoplo cinemático total del límite de potencia eléctrica frente a la resonancia del semieje
+    // La envolvente térmica/eléctrica de los inversores se rige estrictamente por la velocidad del chasis
     float omega_power[4];
     float w_chassis = vx_safe / GP_R_WHEEL;
     for (int i = 0; i < 4; i++) {
-        omega_power[i] = 0.85f * w_chassis + 0.15f * omega[i];
+        omega_power[i] = w_chassis;
     }
 
     gp_friction_ellipse_t_ub(fz_est, fy_est, mu_avg, t_ub_friction);

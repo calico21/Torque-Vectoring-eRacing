@@ -70,55 +70,47 @@ void gp_qp_solve_rwd_closedform(
 ) {
     const float h    = GP_W_REG + GP_W_SMOOTH;
     const float a_eq = 1.0f / GP_R_WHEEL;
-    const float b_eq = fx_driver;
 
-  
-    const float GP_SAT_SOFTNESS = 3.0f; // Nm
-
+    // 1. Ponderación objetivo de suavidad y regulación temporal
     const float t_bl_rl = (GP_W_REG * t_warmstart[GP_RL] + GP_W_SMOOTH * t_prev[GP_RL]) / h;
     const float t_bl_rr = (GP_W_REG * t_warmstart[GP_RR] + GP_W_SMOOTH * t_prev[GP_RR]) / h;
 
     const float lb_rl = t_lb[GP_RL], ub_rl = t_ub[GP_RL];
     const float lb_rr = t_lb[GP_RR], ub_rr = t_ub[GP_RR];
 
-   
-    const float lam = h * (a_eq * (t_bl_rl + t_bl_rr) - b_eq) / (2.0f * a_eq * a_eq);
-    const float t_rl_free = t_bl_rl - lam * a_eq / h;
-    const float t_rr_free = t_bl_rr - lam * a_eq / h;
+    // 2. Par total demandado por el piloto
+    float t_target = fx_driver * GP_R_WHEEL;
 
-   
-    const float margin_rl = fminf(t_rl_free - lb_rl, ub_rl - t_rl_free);
-    const float margin_rr = fminf(t_rr_free - lb_rr, ub_rr - t_rr_free);
-    const float sat_rl = gp_sigmoid(-margin_rl / GP_SAT_SOFTNESS);
-    const float sat_rr = gp_sigmoid(-margin_rr / GP_SAT_SOFTNESS);
+    // Acotar la demanda al límite físico combinado de ambos actuadores
+    const float t_total_min = lb_rl + lb_rr;
+    const float t_total_max = ub_rl + ub_rr;
+    t_target = GP_CLAMP(t_target, t_total_min, t_total_max);
 
-    // --- Caso A: RL satura, RR resuelve.
-    const float t_rl_A = GP_CLAMP(t_rl_free, lb_rl, ub_rl);
-    const float t_rr_A = GP_CLAMP((b_eq / a_eq) - t_rl_A, lb_rr, ub_rr);
+    // 3. Solución libre proyectada sobre T_rl + T_rr = T_target
+    float t_rl_sol = 0.5f * (t_target + t_bl_rl - t_bl_rr);
+    float t_rr_sol = t_target - t_rl_sol;
 
-    // --- CAso B: RR satura, RL resuelve (simetrico a A)
-    const float t_rr_B = GP_CLAMP(t_rr_free, lb_rr, ub_rr);
-    const float t_rl_B = GP_CLAMP((b_eq / a_eq) - t_rr_B, lb_rl, ub_rl);
-
-    // --- Candidato "ambos": clampeo independiente, imposible imposible
-    const float t_rl_clamp_only = GP_CLAMP(t_rl_free, lb_rl, ub_rl);
-    const float t_rr_clamp_only = GP_CLAMP(t_rr_free, lb_rr, ub_rr);
-
-    // --- Mezcla ponderada de los 4 candidatos
-    const float w_free = (1.0f - sat_rl) * (1.0f - sat_rr);
-    const float w_A    = sat_rl * (1.0f - sat_rr);
-    const float w_B    = (1.0f - sat_rl) * sat_rr;
-    const float w_both = sat_rl * sat_rr;
-
-    const float t_rl = w_free * t_rl_free + w_A * t_rl_A + w_B * t_rl_B + w_both * t_rl_clamp_only;
-    const float t_rr = w_free * t_rr_free + w_A * t_rr_A + w_B * t_rr_B + w_both * t_rr_clamp_only;
+    // 4. Árbol de decisión KKT exacto (garantiza Delta = 0.0 Nm si ambos saturan)
+    if (t_rl_sol > ub_rl) {
+        t_rl_sol = ub_rl;
+        t_rr_sol = GP_CLAMP(t_target - t_rl_sol, lb_rr, ub_rr);
+    } else if (t_rl_sol < lb_rl) {
+        t_rl_sol = lb_rl;
+        t_rr_sol = GP_CLAMP(t_target - t_rl_sol, lb_rr, ub_rr);
+    } else if (t_rr_sol > ub_rr) {
+        t_rr_sol = ub_rr;
+        t_rl_sol = GP_CLAMP(t_target - t_rr_sol, lb_rl, ub_rl);
+    } else if (t_rr_sol < lb_rr) {
+        t_rr_sol = lb_rr;
+        t_rl_sol = GP_CLAMP(t_target - t_rr_sol, lb_rl, ub_rl);
+    }
 
     t_out[GP_FL] = 0.0f;
     t_out[GP_FR] = 0.0f;
-    t_out[GP_RL] = t_rl;
-    t_out[GP_RR] = t_rr;
+    t_out[GP_RL] = t_rl_sol;
+    t_out[GP_RR] = t_rr_sol;
 
     if (qp_residual != NULL) {
-        *qp_residual = fabsf(a_eq * (t_rl + t_rr) - b_eq);
+        *qp_residual = fabsf(a_eq * (t_rl_sol + t_rr_sol) - fx_driver);
     }
 }

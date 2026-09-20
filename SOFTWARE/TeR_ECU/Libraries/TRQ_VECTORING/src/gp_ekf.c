@@ -35,10 +35,18 @@ void gp_ekf_predict(
     float vx_safe = GP_MAX(fabsf(vx), 0.5f);
     ekf->wz_corrected = wz_raw - ekf->x[GP_EKF_STATE_BW];
 
-    float vy_dot = ay_filt - (vx_safe * ekf->wz_corrected);
-    ekf->x[GP_EKF_STATE_VY] += vy_dot * dt;
+    // --- Integración Heun RK2 (Predictor-Corrector) ---
+    float vy_dot_k = ay_filt - (vx_safe * ekf->wz_corrected);
+    float vy_pred  = ekf->x[GP_EKF_STATE_VY] + vy_dot_k * dt;
+    vy_pred        = GP_CLAMP(vy_pred, -6.0f, 6.0f);
+
+    float vy_dot_corr = ay_filt - (vx_safe * ekf->wz_corrected);
+    float vy_dot_eff  = 0.5f * (vy_dot_k + vy_dot_corr);
+
+    ekf->x[GP_EKF_STATE_VY] += vy_dot_eff * dt;
     ekf->x[GP_EKF_STATE_VY] = GP_CLAMP(ekf->x[GP_EKF_STATE_VY], -6.0f, 6.0f);
 
+    // Propagación discreta de la covarianza (F = I + A*dt)
     float f01 = dt * vx_safe;
 
     float p00 = ekf->P[0][0];
@@ -56,9 +64,7 @@ void gp_ekf_predict(
     }
 
     ekf->beta_est = atan2f(ekf->x[GP_EKF_STATE_VY], vx_safe);
-    
     ekf->beta_est = GP_CLAMP(ekf->beta_est, -0.523f, 0.523f);
-    
     ekf->vy_std   = sqrtf(ekf->P[0][0]);
 }
 
@@ -109,23 +115,24 @@ void gp_ekf_update_gps(gp_ekf_t* ekf, float vy_gps, uint8_t gps_valid) {
     gp_ekf_scalar_update(ekf, GP_EKF_STATE_VY, vy_gps, ekf->R_gps_vy);
 }
 
-void gp_ekf_update_kinematic_ss(gp_ekf_t* ekf, float ay_filt, float wz_raw, float vx) {
+void gp_ekf_update_kinematic_ss(gp_ekf_t* ekf, float ax_filt, float ay_filt, float wz_raw, float vx) {
     float vx_safe = GP_MAX(fabsf(vx), 0.5f);
     float wz_corr = wz_raw - ekf->x[GP_EKF_STATE_BW];
     
     float vy_ss = (GP_LR * wz_corr) - ((GP_MASS * ay_filt * GP_LF * vx_safe) / (GP_WB * GP_C_ALPHA_R));
-
-    // Clampear vy_ss
     vy_ss = GP_CLAMP(vy_ss, -3.0f, 3.0f);
 
-    // Penallty de sat
-    float ay_norm = fabsf(ay_filt) / 9.81f;
-    float saturation_penalty = 1.0f + 8.0f * GP_CLAMP(ay_norm - 0.5f, 0.0f, 2.0f) * GP_CLAMP(ay_norm - 0.5f, 0.0f, 2.0f);
+    // Penalización por saturación combinada en el diagrama G-G (Kamm Circle)
+    float a_total_g = sqrtf(ax_filt * ax_filt + ay_filt * ay_filt) / 9.81f;
+    
+    // Si la aceleración combinada supera 0.45 G, inflamos cuadráticamente la varianza R
+    // para priorizar la integración inercial y descartar el modelo cinemático lineal
+    float excess_g = GP_CLAMP(a_total_g - 0.45f, 0.0f, 2.0f);
+    float saturation_penalty = 1.0f + 10.0f * (excess_g * excess_g);
     float r_effective = ekf->R_pseudo_vy * saturation_penalty;
 
     gp_ekf_scalar_update(ekf, GP_EKF_STATE_VY, vy_ss, r_effective);
     
-    // hard bound al estimado
     ekf->x[GP_EKF_STATE_VY] = GP_CLAMP(ekf->x[GP_EKF_STATE_VY], -6.0f, 6.0f);
 }
 
